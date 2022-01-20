@@ -1,7 +1,7 @@
 import React from "react";
 
 import Carousel from "../componentes/Carousel";
-import CardSlide from "./CardSlide";
+
 import CardsCity from "../componentes/CardsCity";
 import Search from "./Search";
 import SignIn from "../componentes/SignIn";

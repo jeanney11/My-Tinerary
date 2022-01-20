@@ -7,7 +7,7 @@ import CarruselNew from "./CarrouselNew";
 
 import logo from "../imagenes/logo.jpg";
 import BoraBora from "../imagenes/Bora-Bora.jpg";
-import CardSlide from "../componentes/CardSlide";
+
 import portada3 from "../imagenes/portada3.jpg"
 
 function Home() {
@@ -26,6 +26,8 @@ function Home() {
         <Citiescard />
         <WhoHome/>
     <CarruselNew/>
+
+    
 
       
     </div>

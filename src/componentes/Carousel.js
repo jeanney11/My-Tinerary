@@ -11,7 +11,7 @@ import Orlando from "../imagenes/Orlando.jpg"
 import SelvaNegra from "../imagenes/SelvaNegra.jpg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import CardSlide from "./CardSlide";
+
 
 
 function carousel() {
