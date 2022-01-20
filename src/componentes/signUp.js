@@ -19,7 +19,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        MyThenery@gmail.com
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
       },
 
   paper: {
-    marginTop: theme.spacing(8),
+    //marginTop: theme.spacing(8), (para quitar el margen arriba del signUp)
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
    avatar: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(4),
     background:'#004e92',
   },
 
@@ -151,7 +151,7 @@ export default function SignUp() {
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link href="#" variant="body2">
+              <Link href="../componentes/SignIn.js" variant="body2">
                 Already have an account? Sign in
               </Link>
             </Grid>

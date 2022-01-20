@@ -39,14 +39,15 @@ function Footer(){
                 <p className="grey-text"> Telefono: 1154262729</p>
                 <p className="grey-text">Email: MyThenery@gmail.com</p>
                 <p className="grey-text">Sitio web: https://www.mythenery.com/ar</p>
-                <div className="links"></div> </div>
+                <div className="links"></div> 
+              </div>
 
 
             </div>
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
+            © 2022 Copyright 
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>

@@ -50,7 +50,7 @@ function App() {
   }
   return (
     <div className="App">
-      <div style={{ textAlign: "center", fontFamily: "'Balsamiq Sans', cursive", marginTop:"30px"}}>
+      <div style={{ textAlign: "center", fontFamily: "'Mochiy Pop P One', sans-serif", color:"white", marginTop:"30px"}}>
         <h2>Maravillas del Mundo</h2>
         <p>Lugares de ensueños que toda persona desea conocer</p>
         <div style={{

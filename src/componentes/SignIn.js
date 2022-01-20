@@ -18,7 +18,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
     
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+      MyThenery@gmail.com
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}

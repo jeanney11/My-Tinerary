@@ -45,14 +45,16 @@ function NavBar() {
 
             <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
               <li>
+              <LinkRouter to="/signUp">
                 <a class="dropdown-item" href="#">
                   SignUp
-                </a>
+                </a> </LinkRouter>
               </li>
               <li>
+              <LinkRouter to="/SignIn">
                 <a class="dropdown-item" href="#">
                   SignIn
-                </a>
+                </a> </LinkRouter>
               </li>
             </ul>
           </div>

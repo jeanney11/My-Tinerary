@@ -5,6 +5,10 @@ import likes from "../imagenes/likes.jpg";
 import comentario from "../imagenes/comentario.jpg";
 import like from "../imagenes/like.png";
 import bottum from "../imagenes/bottum.png";
+import Iguazu from "../imagenes/FotoFiltro/Iguazu.jpg";
+import Ushuaia from "../imagenes/FotoFiltro/Ushuaia.jpg";
+import Glaciar from "../imagenes/FotoFiltro/Glaciar.jpg";
+
 
 function CardsCity() {
   return (
@@ -12,15 +16,13 @@ function CardsCity() {
       <div className=" row row-cols-1 row-cols-md-3 g-4">
         <div className="colFilter">
           <div className="Cards h-100">
-            <img src={Escocia} class="card-img-top" alt="..." />
+            <img src={Iguazu} class="card-img-top" alt="..." />
             <div class="card-body">
-            <div className="date">PAIS</div>
-              <h5 className="cards-title">Ciudad</h5>
+            <div className="date">ARGENTINA</div>
+              <h5 className="cards-title">Cataratas del Iguazú, Misiones</h5>
               
               <p className="cards-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+              En la zona existen diversas especies de aves y también pueden observarse yacarés, tortugas, garzas y peces.
               </p>
             </div>
             <div className="card-statsCity">
@@ -45,15 +47,13 @@ function CardsCity() {
         
         <div className="colFilter">
           <div className="Cards h-100">
-            <img src={Escocia} class="card-img-top" alt="..." />
+            <img src={Ushuaia} class="card-img-top" alt="..." />
             <div class="card-body">
-            <div className="date">PAIS</div>
-              <h5 className="cards-title">Ciudad</h5>
+            <div className="date">ARGENTINA</div>
+              <h5 className="cards-title">Tierra del Fuego, Ushuaia</h5>
               
               <p className="cards-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+              Ushuaia, considerada la puerta de la Antártida, es el lugar donde convergen los Océanos Atlántico y Pacífico.
               </p>
             </div>
             <div className="card-statsCity">
@@ -78,15 +78,13 @@ function CardsCity() {
 
         <div className="colFilter">
           <div className="Cards h-100">
-            <img src={Escocia} class="card-img-top" alt="..." />
+            <img src={Glaciar} class="card-img-top" alt="..." />
             <div class="card-body">
-            <div className="date">PAIS</div>
-              <h5 className="cards-title">Ciudad</h5>
+            <div className="date">ARGENTINA</div>
+              <h5 className="cards-title">Glaciar Perito Moreno, Patagonia</h5>
               
               <p className="cards-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+              el Glaciar Perito Moreno resulta ser un increíble espectáculo, siendo parte del campo de hielo Patagónico Sur.
               </p>
             </div>
             <div className="card-statsCity">
