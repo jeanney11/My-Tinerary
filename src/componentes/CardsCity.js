@@ -1,5 +1,7 @@
 import { ReactElement } from "react";
 import React from "react";
+import {Link as Linkrouter} from "react-router-dom";
+
 import Escocia from "../imagenes/Escocia.jpg";
 import likes from "../imagenes/likes.jpg";
 import comentario from "../imagenes/comentario.jpg";
@@ -37,8 +39,8 @@ function CardsCity() {
               <div className="value">5</div>
               
             </div>
-            <div className="stat">
-              <div className="type"><img src={bottum} width="40" height="40" alt="..."/></div>
+            <div className="stat btn">
+            <Linkrouter to="/City"><div className="type"><img src={bottum} width="40" height="40" alt="..."/></div></Linkrouter>
             <div className="value">Read More</div>
             </div>
           </div>  
@@ -69,7 +71,7 @@ function CardsCity() {
               
             </div>
             <div className="stat">
-              <div className="type"><img src={bottum} width="40" height="40" alt="..."/></div>
+            <Linkrouter to="/City"><div className="type"><img src={bottum} width="40" height="40" alt="..."/></div></Linkrouter>
             <div className="value">Read More</div>
             </div>
           </div>  
@@ -84,7 +86,7 @@ function CardsCity() {
               <h5 className="cards-title">Glaciar Perito Moreno, Patagonia</h5>
               
               <p className="cards-text">
-              el Glaciar Perito Moreno resulta ser un increíble espectáculo, siendo parte del campo de hielo Patagónico Sur.
+              El Glaciar Perito Moreno resulta ser un increíble espectáculo, siendo parte del campo de hielo Patagónico Sur.
               </p>
             </div>
             <div className="card-statsCity">
@@ -100,7 +102,7 @@ function CardsCity() {
               
             </div>
             <div className="stat">
-              <div className="type"><img src={bottum} width="40" height="40" alt="..."/></div>
+            <Linkrouter to="/City"><div className="type"><img src={bottum} width="40" height="40" alt="..."/></div></Linkrouter>
             <div className="value">Read More</div>
             </div>
           </div>  

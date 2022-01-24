@@ -13,6 +13,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import {Link as Linkrouter} from "react-router-dom";
 
 function Copyright() {
   return (
@@ -33,6 +34,10 @@ const useStyles = makeStyles((theme) => ({
         height: '100vh',
         
       },
+
+      color: {
+        background: 'radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% )',
+      },
     
       image: {
         backgroundImage: 'url(https://source.unsplash.com/random)',
@@ -49,7 +54,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     background: 'radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,94,247,1) 17.8%, rgba(2,245,255,1) 100.2% )',
-    borderRadius: '10px',
+    
+    paddingRight:'10px',
+    paddingLeft: '10px',
     
   },
 
@@ -151,16 +158,17 @@ export default function SignUp() {
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link href="../componentes/SignIn.js" variant="body2">
+              <Linkrouter to="/SignIn" variant="body2">
                 Already have an account? Sign in
-              </Link>
+              </Linkrouter>
             </Grid>
           </Grid>
         </form>
-      </div>
-      <Box mt={5}>
+        <Box mt={5}>
         <Copyright />
       </Box>
+      </div>
+      
     </Grid>
     </Grid>
   );
