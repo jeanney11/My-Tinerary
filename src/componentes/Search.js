@@ -5,12 +5,12 @@ import React from "react";
 function Search(){
 
     return(
-        <div class="wrapper">
-	<div class="container">
-    <div class="search_wrap search_wrap_6">
+        <div className="wrapper">
+	<div className="container">
+    <div className="search_wrap search_wrap_6">
 			<div class="search_box">
 				<input type="text" class="input" placeholder="search..."/>
-				<div class="btn">
+				<div className="btn">
 					<p>Search</p>
 				</div>
 			</div>

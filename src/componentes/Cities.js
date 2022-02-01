@@ -16,7 +16,7 @@ function Cities() {
       <Search />
 
       <CardsCity />
-      <div class="header">
+      <div className="header">
         <p>Aprovecha Nuestra Promoción</p>
       </div>
       

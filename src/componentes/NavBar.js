@@ -32,27 +32,27 @@ function NavBar() {
       </div>
       <div className="col-2">
         <a className="d-grid gap-2 d-md-flex justify-content-md" href="#">
-          <div class="btn-group" role="group">
+          <div className="btn-group" role="group">
             <button
               id="btnGroupDrop1"
               type="button"
-              class="btn btn-transparent dropdown"
+              className="btn btn-transparent dropdown"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
               <MaterialIcon icon="person_pin" color="#004e92" size="large" />
             </button>
 
-            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <ul className="dropdown-menu" aria-labelledby="btnGroupDrop1">
               <li>
               <LinkRouter to="/signUp">
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   SignUp
                 </a> </LinkRouter>
               </li>
               <li>
               <LinkRouter to="/SignIn">
-                <a class="dropdown-item" href="#">
+                <a className="dropdown-item" href="#">
                   SignIn
                 </a> </LinkRouter>
               </li>

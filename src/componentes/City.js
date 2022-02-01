@@ -2,6 +2,7 @@ import React from "react";
 
 import Itinerary from "./Itinerary";
 import CityFilter from "./CityFilter";
+import HeadCity from "./HeadCity";
 
 function City(){
 
@@ -9,7 +10,7 @@ function City(){
 
         <div>
 
-        
+        <HeadCity/>
         <Itinerary/>
 
         </div>

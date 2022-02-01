@@ -758,7 +758,7 @@ width: auto;
 
 .sp-card-3 {
   width: 550px;
-  height: 345px;
+  height: 390px;
   border: 1px solid #efefef;
   border-radius: 10px;
 
@@ -773,7 +773,7 @@ width: auto;
   color: #525252;
   font-weight: 600;
   font-size: 25px;
-  padding: 15px 20px;
+  padding: 10px 15px 0px;
   text-align: right;
   width: 40%;
   float: right;
@@ -788,19 +788,21 @@ width: auto;
 }
 
 .sp-card-3 .footer-Card {
-      padding:0;
+      padding: 0;
+   
+      
   }
 
 .sp-card-3 .footer-Card p {
   
           font-size: 15px;
           color: #505050;
-          line-height: 1.5;
+          line-height: 1.5 px;
           
       }
 
 .sp-card-3 .buy-btn {
-      padding: 0px 40px 35px 0;
+      padding: 0px 35px 45px 0;
   }
 
 .sp-card-3 .buy-btn a {
@@ -814,7 +816,7 @@ width: auto;
 
 .sp-card-3 .cart-btn a {
           text-decoration: none;
-          padding: 5px 53px;
+          padding: 5px 45px;
           border: 1px solid;
           border-radius: 5px;
           background-color: #ff4f1d;
@@ -824,11 +826,12 @@ width: auto;
 .sp-card-3 .footer-Card li:nth-child(1) {
           display: inline-block;
           padding-top: 5px;
+          padding-inline-end: 6px;
       }
 
 .sp-card-3 .footer-Card li:nth-child(2) {
           display: inline-block;
-          width: 55%;
+          width: 60%;
           text-align: right;
       }
 
@@ -837,7 +840,7 @@ width: auto;
           }
   
 .sp-card-3 ul {
-      padding:30px 10px 5px 10px;
+      padding:30px 10px 0px 10px;
   }        
 
 .sp-card-3 ul li img {
@@ -859,11 +862,13 @@ width: auto;
 .sp-card-3 .product-details .product-img {
           width: 40%;
           float: left;
-          padding-top: 10px;
+          padding-top: 25px;
+          list-style: none;
       }
 .sp-card-3 .product-details .product-description {
          
           text-align: right;
+          list-style: none;
       }
 
 .sp-card-3 .product-details .product-description a {

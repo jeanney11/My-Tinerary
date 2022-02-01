@@ -7,14 +7,14 @@ import Twitter from "../imagenes/Twitter.jpg"
 function Footer(){
 
     return(
-        <footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">MY THENERY</h5>
-                <p class="grey-text text-lighten-4">Nos enorgullece anunciar que Royal Travel ha estado proporcionando los más altos estándares de varios tours y paquetes de viajes en el mundo durante 5 años.</p>
+        <footer className="page-footer">
+          <div className="container">
+            <div className="row">
+              <div className="col l6 s12">
+                <h5 className="white-text">MY THENERY</h5>
+                <p className="grey-text text-lighten-4">Nos enorgullece anunciar que Royal Travel ha estado proporcionando los más altos estándares de varios tours y paquetes de viajes en el mundo durante 5 años.</p>
               </div>
-              <div class="col l4 offset-l2 s12">
+              <div className="col l4 offset-l2 s12">
                 <div className="links">
                 <ul>
                   <li><a className="navbar-brand " href="https://es-la.facebook.com/">
@@ -32,9 +32,9 @@ function Footer(){
                 </ul>
                 </div>
               </div>
-              <div class="col l6 s12">
+              <div className="col l6 s12">
                 
-                <h5 class="white-text">Datos de Contactos</h5>
+                <h5 className="white-text">Datos de Contactos</h5>
                 <p className="grey-text"> Dirección: Buenos Aires, Argentina</p>
                 <p className="grey-text"> Telefono: 1154262729</p>
                 <p className="grey-text">Email: MyTheneryRoyalTravel@gmail.com</p>
@@ -45,10 +45,10 @@ function Footer(){
 
             </div>
           </div>
-          <div class="footer-copyright">
-            <div class="container">
+          <div className="footer-copyright">
+            <div className="container">
            Copyright 2022  ©  
-            <a class="grey-text text-lighten-4 right" href="https://github.com/jeanney11/My-Tinerary.git">Jeanney Reyes</a>
+            <a className="grey-text text-lighten-4 right" href="https://github.com/jeanney11/My-Tinerary.git">Jeanney Reyes</a>
             </div>
           </div>
         </footer>

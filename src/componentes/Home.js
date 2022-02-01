@@ -13,7 +13,7 @@ import portada3 from "../imagenes/portada3.jpg"
 function Home() {
   return (
     <div>
-      <div clssName="Titulo">
+      <div className="Titulo">
         <div className="video-container">
           <img src={portada3} width="100%" height="400" alt="..." />
           <h1 className="texto"> Royal Travel</h1>
