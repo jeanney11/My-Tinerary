@@ -1,3 +1,5 @@
+import React from "react";
+
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -11,10 +13,15 @@ import City  from "./componentes/City";
 import axios from "axios";
 
 function App() {
-  axios.get("http://restcountries.com/v3.1/all")
+const data =[]
+  async function test(){
+
+  }
+  axios.get("http://localhost:4000/api/datos")
   .then(response =>{
-    var busquedaPais =response.data.filter(pais=>pais.name.common.includes("Argentine"))
-    console.log(busquedaPais)
+    
+    data.push(...response.data.response.cities)
+    console.log(data)
   })
   return (
     <BrowserRouter>
@@ -22,7 +29,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={ <Home />}/>
-        <Route path="/cities"  element= {<Cities />}/>
+        <Route path="/cities"  element= {<Cities data={data}/>}/>
         <Route path="/SignUp" element= {<SignUp/>}/>
         <Route path="/SignIn" element={<SignIn/>}/>
         <Route path="/City" element ={<City/>}/>

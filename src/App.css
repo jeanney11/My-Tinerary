@@ -754,6 +754,7 @@ justify-content: center;
 padding: 20px;
 height: 400px;
 width: auto;
+margin-bottom: 60px;
 }
 
 .sp-card-3 {
@@ -810,7 +811,7 @@ width: auto;
           padding: 5px 65px;
           border: 1px solid;
           border-radius: 5px;
-          background-color: #ff4f1d;
+          background-color: rgb(162, 72, 235);;
           color:#fff;
       }
 
@@ -819,7 +820,7 @@ width: auto;
           padding: 5px 45px;
           border: 1px solid;
           border-radius: 5px;
-          background-color: #ff4f1d;
+          background-color: rgb(162, 72, 235);
           color:#fff;
       }
 
@@ -883,10 +884,221 @@ width: auto;
               direction: rtl;
               line-height: 1.5;
           }
+          
+
+
+.travel{
+   
+    justify-content: center;
+    padding: 20px;
+    height: 400px;
+    width: auto;
+   
+}
+
+
+/* Encabezado de la página City*/
 
 
 
 
 
+.bodyCity {
+  background-color: transparent;
+  
+}
 
+.containerCity {
+ 
+  padding: 20px;
+}
+
+.img-responsive{
+  width: 1200px;
+  height: 400px;
+}
+
+.profile-card {
+	background-color:rgb(162, 72, 235);
+  margin-bottom: 20px;
+  width: 1200px;
+			
+		}
+		
+.profile-pic {
+  
+  border-radius: 50%;
+  position: absolute;
+  top: -65px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  max-width: 100px;
+  -webkit-transition: all 0.4s;
+		  transition: all 0.4s;
+				}
+
+				
+.profile-info {
+		color: #BDBDBD;
+		padding: 25px;
+	    position: relative;
+	    margin-top: 15px;
+				}
+		
+.profile-info h2 {
+	color: #E8E8E8;
+    letter-spacing: 4px;
+	  padding-bottom: 12px;
+				}
+				
+.profile-info span {
+	display: block;
+    font-size: 12px;
+    color: #4CB493;
+	letter-spacing: 2px;
+			}
+
+.profile-info a {
+	 color: #4CB493;
+
+		}
+.profile-info i {
+	    padding: 15px 35px 0px 35px;
+		}
+		
+
+.profile-card:hover .profile-pic {
+	transform: scale(1.1);
+		}
+
+.profile-card:hover .profile-info hr  {
+	opacity: 1;
+		}
+		
+		
+		
+		
+/* Underline From Center */
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(197, 44, 44, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 52%;
+  right: 52%;
+  bottom: 0;
+  background: #FFFFFF;
+  border-radius: 50%;
+  height: 3px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.profile-card:hover .hvr-underline-from-center:before, .profile-card:focus .hvr-underline-from-center:before, .profile-card:active .hvr-underline-from-center:before {
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #CECECE;
+  border-radius: 0;
+}
+.infoCity a{
+  background-color: white;
+    
+}
+.infoCity i{
+  background:lawngreen;
+}
+
+/* InfoCty*/
+
+
+.sec {
+  font-family: 'Raleway', sans-serif;
+  padding: 10px 0;
+  background: transparent;
+  text-align: center;
+  word-wrap:break-word;
+}
+
+  .sec ul {
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style: none;
+  }
+  .sec li {
+      padding: 10px;
+      width: 300px;
+      transition: box-shadow .3s;
+    }
+
+      &:hover {
+        box-shadow: 0 12px 10px 0 rgba(165, 34, 34, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      &:hover span {
+        color: blue;
+      }
+      &:hover p {
+        color: #555;
+      }
+      &:hover h3 {
+        color: blue;
+      }
+      &:hover h3:after{
+        width: 25px;
+      }
+      
+        &:before, &:after {
+          position: static;
+        }
+      
+
+    .sec h3 {
+        color: darken(green, 20%);
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 100;
+        transition: color .3s;
+      }
+        &:after {
+          content: '';
+          position: relative;
+          left: 50%;
+          top: 10px;
+          transform: translateX(-50%);
+          display: block;
+          width: 40px;
+          height: 1px;
+          background: darken(green, 20%);
+          transition: width .3s;
+        }
+      
+  .sec p {
+        color: whitesmoke;
+        text-align: center;
+        text-indent: 1em;
+        font-size: 20px;
+        line-height: 20px;
+        transition: color .3s;
+      }
+    
+  
 

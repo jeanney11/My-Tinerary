@@ -12,7 +12,8 @@ import Ushuaia from "../imagenes/FotoFiltro/Ushuaia.jpg";
 import Glaciar from "../imagenes/FotoFiltro/Glaciar.jpg";
 
 
-function CardsCity() {
+function CardsCity(props) {
+  console.log (props.cities)
   return (
     <div className="Filtro">
       <div className=" row row-cols-1 row-cols-md-3 g-4">

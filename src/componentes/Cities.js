@@ -10,12 +10,14 @@ import SignUp from "../componentes/signUp";
 import Itinerary from "../componentes/Itinerary";
 import CityFilter from "../componentes/CityFilter";
 
-function Cities() {
+function Cities(props) {
+  const cities = props.data
+  console.log(props.data)
   return (
     <div>
       <Search />
 
-      <CardsCity />
+      <CardsCity cities={cities} />
       <div className="header">
         <p>Aprovecha Nuestra Promoción</p>
       </div>
