@@ -10,21 +10,21 @@ function HeadCity(){
 
     return(
  <div className="bodyCity">   
-<div class="containerCity">
-  <div class="row ">
-    <div class="col-lg-12">
+<div className="containerCity">
+  <div className="row ">
+    <div className="col-lg-12">
       <div>
 
 
-        <div class="col-md-4">
-          <div class="profile-card text-center">
+        <div className="col-md-4">
+          <div className="profile-card text-center">
 
-            <img class="img-responsive" src={Iguazu}/>
-            <div class="profile-info">
+            <img className="img-responsive" src={Iguazu}/>
+            <div className="profile-info">
 
-              <img class="profile-pic" src={logo4}/>
+              <img className="profile-pic" src={logo4}/>
 
-              <h2 class="hvr-underline-from-center">Cataratas de Iguazu<span>Argentina</span></h2>
+              <h2 className="hvr-underline-from-center">Cataratas de Iguazu<span>Argentina</span></h2>
               <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
              
             </div>

@@ -19,7 +19,7 @@ function CardsCity(props) {
       <div className=" row row-cols-1 row-cols-md-3 g-4">
         <div className="colFilter">
           <div className="Cards h-100">
-            <img src={Iguazu} class="card-img-top" alt="..." />
+            <img src={Iguazu} className="card-img-top" alt="..." />
             <div className="card-body">
             <div className="date">ARGENTINA</div>
               <h5 className="cards-title">Cataratas del Iguazú, Misiones</h5>
@@ -50,7 +50,7 @@ function CardsCity(props) {
         
         <div className="colFilter">
           <div className="Cards h-100">
-            <img src={Ushuaia} class="card-img-top" alt="..." />
+            <img src={Ushuaia} className="card-img-top" alt="..." />
             <div className="card-body">
             <div className="date">ARGENTINA</div>
               <h5 className="cards-title">Tierra del Fuego, Ushuaia</h5>
@@ -81,7 +81,7 @@ function CardsCity(props) {
 
         <div className="colFilter">
           <div className="Cards h-100">
-            <img src={Glaciar} class="card-img-top" alt="..." />
+            <img src={Glaciar} className="card-img-top" alt="..." />
             <div className="card-body">
             <div className="date">ARGENTINA</div>
               <h5 className="cards-title">Glaciar Perito Moreno, Patagonia</h5>

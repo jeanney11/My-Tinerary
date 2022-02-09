@@ -5,6 +5,9 @@ import CityFilter from "./CityFilter";
 import HeadCity from "./HeadCity";
 import SlideItinerary from "./SlideItinerary";
 import InfoCity from "./InfoCity";
+import TitleCity from "./TitleCity";
+
+
 
 function City(){
 
@@ -14,8 +17,11 @@ function City(){
 
         <HeadCity/>
         <InfoCity/>
-        <Itinerary/>
+        <TitleCity/>
 
+
+        <Itinerary/>
+        
        
 
         </div>

@@ -11,7 +11,7 @@ function Footer(){
           <div className="container">
             <div className="row">
               <div className="col l6 s12">
-                <h5 className="white-text">MY THENERY</h5>
+                <h5 className="white-text">MY ITINERARY</h5>
                 <p className="grey-text text-lighten-4">Nos enorgullece anunciar que Royal Travel ha estado proporcionando los más altos estándares de varios tours y paquetes de viajes en el mundo durante 5 años.</p>
               </div>
               <div className="col l4 offset-l2 s12">

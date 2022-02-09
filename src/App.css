@@ -760,13 +760,13 @@ margin-bottom: 60px;
 .sp-card-3 {
   width: 550px;
   height: 390px;
-  border: 1px solid #efefef;
+  border: 1px solid #242323;
   border-radius: 10px;
-
+  background-color: whitesmoke;
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
   -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
   -o-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
   
 }    
       
@@ -1099,6 +1099,50 @@ margin-bottom: 60px;
         line-height: 20px;
         transition: color .3s;
       }
-    
+
+/*------- Slider para los titulos  --------*/
+
+
+.bodyTitle {
+  background:#212121;
+}
+.a {
+	width:580px; 
+	height: 80px;
+	overflow:hidden;
+  background-image:url(https://best-itinerary.com/wp-content/uploads/2018/05/logo-best-iti-2-noir.png);
+	background-color: rgb(162, 72, 235);
+  position:relative;
+  margin:auto;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  box-shadow:0 0 10px 1px rgb(48, 46, 46)
+}		
+.b {
+	width:0; 
+	height:80px;
+	overflow:hidden;
+	margin-left:-50px;
+	transform:skew(-20deg);
+	transition: width 1s ease;
   
+}		
+.a:hover .b {
+	width:700px;
+}
+.c {
+	width:700px; 
+	height:80px;
+	transform:skew(20deg);
+	margin-left:-64px;
+  background-image:url(https://blankitinerary.com/wp-content/uploads/2018/12/logo.png);
+	
+	background-position:114px 0;
+  
+}	
+
+
+/*--------  PRUEBA -------*/
 
