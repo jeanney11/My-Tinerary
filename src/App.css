@@ -1049,24 +1049,24 @@ margin-bottom: 60px;
       transition: box-shadow .3s;
     }
 
-      &:hover {
+      .hover {
         box-shadow: 0 12px 10px 0 rgba(165, 34, 34, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
       }
 
-      &:hover span {
+      .hover span {
         color: blue;
       }
-      &:hover p {
+      .hover p {
         color: #555;
       }
-      &:hover h3 {
+      .hover h3 {
         color: blue;
       }
-      &:hover h3:after{
+      .hover h3:after{
         width: 25px;
       }
       
-        &:before, &:after {
+      .before, .after {
           position: static;
         }
       
@@ -1078,7 +1078,7 @@ margin-bottom: 60px;
         font-weight: 100;
         transition: color .3s;
       }
-        &:after {
+        .after {
           content: '';
           position: relative;
           left: 50%;
