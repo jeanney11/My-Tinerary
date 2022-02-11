@@ -1,6 +1,5 @@
 import React from "react";
-import Avatar1 from "../ImagenFilter/CommentsImg/Avatar1.jpg";
-import Avatar2 from "../ImagenFilter/CommentsImg/Avatar2.jpg";
+
 
 
 function Comments(){

@@ -1,10 +1,7 @@
 import React from "react";
 
 import Cancun from "../imagenes/Cancun.jpg";
-import Bellagio2 from "../ImagenFilter/ItinerayImg/Bellagio2.jpg";
-import Bellagio1 from "../ImagenFilter/ItinerayImg/Bellagio1.jpg";
-import BurjAlArab1 from "../ImagenFilter/ItinerayImg/BurjAlArab1.jpg";
-import BurjAlArab2 from "../ImagenFilter/ItinerayImg/BurjAlArab2.jpg";
+
 
 
 
@@ -25,11 +22,11 @@ function Itinerary() {
 
                         <ul className="product-details">
                             <li className="product-img">
-                                <img src={Bellagio2}/>                                
+                                <img src={Cancun}/>                                
                             </li>
 
                             <li className="product-description">
-                            <img src={Bellagio1}/>     
+                            <img src={Cancun}/>     
                             </li>
                         </ul>
                         
@@ -58,11 +55,11 @@ function Itinerary() {
     
                             <ul className="product-details">
                                 <li className="product-img">
-                                    <img src={BurjAlArab1}/>                                
+                                    <img src={Cancun}/>                                
                                 </li>
     
                                 <li className="product-description">
-                                <img src={BurjAlArab2}/>     
+                                <img src={Cancun}/>     
                                 </li>
                             </ul>
                             

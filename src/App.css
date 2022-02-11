@@ -1,5 +1,13 @@
 
 
+
+
+.ParentsCards{
+  display:flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+}
+
 /*------Barra de Navegacion ---------*/
 .navegacion{
   height: auto;
@@ -261,6 +269,10 @@
     border-radius: 10px;
 
 
+}
+
+.Cards {
+padding: 0;
 }
 .text{
   height: auto !important;

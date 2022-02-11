@@ -9,8 +9,7 @@ import Cancun from "../imagenes/Cancun.jpg";
 import Hakoya from "../imagenes/Hakoya.jpg";
 import Orlando from "../imagenes/Orlando.jpg"
 import SelvaNegra from "../imagenes/SelvaNegra.jpg";
-import Bellagio2 from "../ImagenFilter/ItinerayImg/Bellagio2.jpg";
-import Bellagio1 from "../ImagenFilter/ItinerayImg/Bellagio1.jpg";
+
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -53,11 +52,11 @@ function SlideItinerary() {
 
                         <ul className="product-details">
                             <li className="product-img">
-                                <img src={Bellagio2}/>                                
+                                <img src={BoraBora}/>                                
                             </li>
 
                             <li className="product-description">
-                            <img src={Bellagio1}/>     
+                            <img src={BoraBora}/>     
                             </li>
                         </ul>
                         
@@ -88,11 +87,11 @@ function SlideItinerary() {
 
                         <ul className="product-details">
                             <li className="product-img">
-                                <img src={Bellagio2}/>                                
+                                <img src={BoraBora}/>                                
                             </li>
 
                             <li className="product-description">
-                            <img src={Bellagio1}/>     
+                            <img src={BoraBora}/>     
                             </li>
                         </ul>
                         
@@ -123,11 +122,11 @@ function SlideItinerary() {
 
                         <ul className="product-details">
                             <li className="product-img">
-                                <img src={Bellagio2}/>                                
+                                <img src={BoraBora}/>                                
                             </li>
 
                             <li className="product-description">
-                            <img src={Bellagio1}/>     
+                            <img src={BoraBora}/>     
                             </li>
                         </ul>
                         

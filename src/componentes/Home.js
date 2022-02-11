@@ -4,6 +4,7 @@ import Slide from "./Slide";
 import Carousel from "./Carousel";
 import WhoHome from "./WhoHome";
 import CarruselNew from "./CarrouselNew";
+import {Link as LinkRouter} from "react-router-dom";
 
 import logo from "../imagenes/logo.jpg";
 import BoraBora from "../imagenes/Bora-Bora.jpg";

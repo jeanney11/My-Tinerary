@@ -6,7 +6,7 @@ import HeadCity from "./HeadCity";
 import SlideItinerary from "./SlideItinerary";
 import InfoCity from "./InfoCity";
 import TitleCity from "./TitleCity";
-import Pruebas from "./Pruebas";
+
 
 
 
@@ -21,7 +21,7 @@ function City(){
         <TitleCity/>
         <Itinerary/>
         
-        <Pruebas/>
+        
        
 
         </div>
