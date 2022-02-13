@@ -3,12 +3,6 @@ import React from "react";
 
 import BoraBora from "../imagenes/Bora-Bora.jpg";
 import CraigievarCastle from "../imagenes/CraigievarCastle.jpg"
-import Escocia from "../imagenes/Escocia.jpg";
-import Noruega from "../imagenes/Noruega.jpg";
-import Cancun from "../imagenes/Cancun.jpg";
-import Hakoya from "../imagenes/Hakoya.jpg";
-import Orlando from "../imagenes/Orlando.jpg"
-import SelvaNegra from "../imagenes/SelvaNegra.jpg";
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';

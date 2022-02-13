@@ -2,11 +2,7 @@
 
 
 
-.ParentsCards{
-  display:flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-}
+
 
 /*------Barra de Navegacion ---------*/
 .navegacion{
@@ -30,12 +26,9 @@
 
 
 .Encabezado {
-  
-  
   display: flex;
   justify-content: center;
   align-content: center;
-
 }
 /*----------  Imagen y Eslogan  -------*/
 .texto {
@@ -208,7 +201,7 @@
   font-size: 9px;
   text-align: justify;
   color: white;
-  text-shadow: 0 0 5px black;
+  text-shadow: 0 0 10px black;
   
   padding: 15px;
   @media screen and (max-width: 820px){
@@ -267,13 +260,12 @@
     justify-content:"center";
     flex-direction:"row";
     border-radius: 10px;
-
-
 }
 
 .Cards {
 padding: 0;
 }
+
 .text{
   height: auto !important;
   padding-bottom: 10px;
@@ -283,11 +275,7 @@ padding: 0;
 .tour{
 margin: 30px;
 padding-left: 30px;
-display: inline;
-
-
-
-    
+display: inline;    
 }
 
 .cards{
@@ -300,8 +288,6 @@ display: inline;
     justify-content: space-between;
     cursor: pointer;
     transition: transform 200ms ease-in;
-    
-
 }
 
 .cards_image {
@@ -373,21 +359,22 @@ margin-right: 10px;
 }  
 
 .Homecard-text{
-  font-size: 13px;
+  font-size: 14px;
   padding: 10px;
-  margin-bottom: 8px ;
+  margin-bottom: 6px ;
   text-align: justify;
 
 }
 h3{
+  text-align: justify;
   color: rgb(252, 102, 187);
   font-size: 20px;
   margin-left: 50px;
-  text-shadow: 0 0 5px rgb(250, 209, 211);
+  text-shadow: 0 0 5px rgb(130, 109, 134);
 }
 .Homecard-text p{
   color: white;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   text-shadow: 0 0 5px black;
   
 }
@@ -477,9 +464,15 @@ h3{
 
 /* -------   tarjetas del medio Filtro ------*/
 .Filtro{
-  padding-left: 30px;
+  padding-left: 25px;
   padding-right: 30px;
   margin-bottom: 40px;
+  
+}
+
+.row.row-cols-1.row-cols-md-4.g-4 {
+  justify-content: center;
+  
 }
 
 .Cards{
@@ -493,9 +486,6 @@ background: white;
 
   transition: 0.5s ease;
   cursor: pointer;
-
-  
-  
 }
 
 .Cards:hover {
@@ -521,6 +511,7 @@ background: white;
 
 .cards-text{
   font-size: 14px;
+  text-align: justify;
 }
 
 .card-statsCity {
@@ -543,7 +534,8 @@ background: white;
 }
 
 
-/*--------   Search  --------*/
+/*--------   Search  --------*/ 
+
 
 .header{
 	width: 1000px;
@@ -570,6 +562,7 @@ background: white;
 .search_wrap{
 	width: 500px;
 	margin: 38px auto;
+  
 }
 
 .search_wrap .search_box{
@@ -645,7 +638,7 @@ background: white;
 .Itinerary {
   margin-bottom: 30px;
   background-color: #dfe6e9;
-  -webkit-transform: perspective(900px);
+  transform-style: perspective(900px);
   -webkit-transform-style: preserve-3d;
   
 }

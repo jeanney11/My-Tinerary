@@ -33,7 +33,7 @@ function Citiescard() {
                 <div className="row no-gutters">
                     <div className="card-body">
                         <h5 className="card-title">Bangkok, Thailandia</h5>
-                        <p className="card-text pl-2 mt-2">"La ciudad de los ángeles", como se conoce entre sus habitantes. Bangkok ha crecido y se ha desarrollado como una ciudad cosmopolita del siglo XXI. La estancia en Bangkok incluye una visita al Gran Palacio Real,el Templo Buda de Esmeralda (Wat Phra Kaeo), el Templo del Amanecer (Wat Arun) y Wat Pho, especialmente conocido por acoger al enorme Buda Reclinado, el Museo Nacional, la Mansión Vimanmek y el Palacio Suan Pakkad, auténticos tesoros nacionales. </p>
+                        <p className="card-text pl-2 mt-2">"The City of Angels", as it is known among its inhabitants, has grown and developed as a cosmopolitan city of the 21st century. A stay here includes a visit to the Grand Royal Palace, the Emerald Buddha Temple (Wat Phra Kaeo), the Temple of Dawn (Wat Arun) and Wat Pho, especially known for hosting the enormous Reclining Buddha, the National Museum, the Vimanmek Mansion and the Suan Pakkad Palace, authentic national treasures. </p>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@ function Citiescard() {
                 <div className="row no-gutters">
                     <div className="card-body">
                         <h5 className="card-title">Londres, Reino Unido</h5>
-                        <p className="card-text pl-2 mt-2">Londres es uno de los centros neurálgicos en el ámbito de las artes, el comercio, la educación, el entretenimiento, la moda, las finanzas, los medios de comunicación, la investigación, el turismo o el transporte. Es el principal centro financiero del mundo junto con Nueva York. Cuenta con cuatro enclaves declarados Patrimonio de la Humanidad: la Torre de Londres, el Real Jardín Botánico de Kew, el sitio formado por el Palacio, la Abadía de Westminster, la Iglesia de Santa Margarita y Greenwich. </p>
+                        <p className="card-text pl-2 mt-2">London is one of the nerve centers in the field of the arts, commerce, education, entertainment, fashion, finance, the media, research, tourism and transport. It is the main financial center in the world along with New York. It has four enclaves declared World Heritage Sites: the Tower of London, the Royal Botanic Gardens of Kew, the site formed by the Palace, Westminster Abbey, the Church of Saint Margaret and Greenwich. </p>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@ function Citiescard() {
                 <div className="row no-gutters">
                     <div className="card-body">
                         <h5 className="card-title">Paris, Francia</h5>
-                        <p className="card-text pl-2 mt-2">París, la ciudad del amor. Cada año, más de 14 millones de turistas deciden visitarla atraídos por sus magníficos monumentos, sus calles de época y grandes bulevares. Es una de las capitales gastronómicas más reputadas del mundo. Ver la imponente Torre Eiffel, perderse en los Campos Elíseos, disfrutar de un espectáculo de cabaret en Moulin Rouge o pasear por el bohemio barrio de Montmartre. Algunas de estas cosas la hacen única, un lugar de ensueño donde vivir un cuento.</p>
+                        <p className="card-text pl-2 mt-2">The city of love, every year, more than 14 million tourists decide to visit it, attracted by its magnificent monuments, its period streets and grand boulevards. It is one of the most renowned gastronomic capitals in the world. See the imposing Eiffel Tower, get lost on the Champs-Elysées, enjoy a cabaret show at the Moulin Rouge or stroll through the bohemian Montmartre district. Some of these things make it unique, a dream place where you can live a story.</p>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@ function Citiescard() {
                 <div className="row no-gutters">
                     <div className="card-body">
                         <h5 className="card-title">Dubai, Emiratos Arabes</h5>
-                        <p className="card-text pl-2 mt-2">Dubái es una ciudad emirato de los Emiratos Árabes Unidos conocida por su lujoso comercio, la arquitectura ultramoderna y su vida nocturna animada. Burj Khalifa, una torre de 830 m de alto, domina el paisaje lleno de rascacielos. A sus pies se encuentra la Fuente de Dubái, con coreografías de chorros y luces al ritmo de la música. En las islas artificiales justo frente a la costa están Atlantis, la Palma, un centro turístico con agua y parques de animales marinos. </p>
+                        <p className="card-text pl-2 mt-2">Dubai is known for its luxurious shopping, ultra-modern architecture and lively nightlife. Burj Khalifa, an 830m-high tower, dominates the skyscraper-filled landscape. At its feet is the Dubai Fountain, with choreography of jets and lights to the rhythm of music. On artificial islands just off the coast are Atlantis, La Palma, a resort with water and marine animal parks. </p>
                     </div>
                 </div>
             </div>
@@ -132,7 +132,7 @@ function Citiescard() {
                 <div className="row no-gutters">
                     <div className="card-body">
                         <h5 className="card-title">Singapur, Singapur</h5>
-                        <p className="card-text pl-2 mt-2">Singapur es un popular destino turístico, por lo cual el turismo es uno de los sectores económicos más grandes del país. El distrito comercial de Orchard Road es una de las atracciones más famosas que ofrece Singapur. Para atraer a más visitantes, el Gobierno decidió en 2005 legalizar el juego y permitir que se construyeran dos casinos o centros turísticos integrados en la zona de Marina South y la isla de Sentosa. </p>
+                        <p className="card-text pl-2 mt-2">Singapore is a popular tourist destination, making tourism one of the country's largest economic sectors. The Orchard Road shopping district is one of the most famous attractions it has to offer. To attract more visitors, the government decided in 2005 to legalize gambling and allow two integrated casinos or resorts to be built in the area of Marina South and Sentosa Island. </p>
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@ function Citiescard() {
                 <div className="row no-gutters">
                     <div className="card-body">
                         <h5 className="card-title">New York, Estados Unidos</h5>
-                        <p className="card-text pl-2 mt-2">Los principales destinos incluyen el Edificio Empire State, la Isla Ellis, las producciones teatrales de Broadway, el Museo Metropolitano de Arte, y otras atracciones como Central Park, Washington Square Park, Rockefeller Center, Times Square, el Zoológico del Bronx, el Jardín Botánico, las tiendas de lujo de la Quinta Avenida y la Avenida Madison, el Festival de cine de Tribeca, y espectáculos gratuitos en Central Park en Summerstage y el Teatro Delacorte, La Estatua de la Libertad, etc.</p>
+                        <p className="card-text pl-2 mt-2">Major destinations include the Empire State Building, Ellis Island, Broadway theater productions, the Metropolitan Museum of Art, and other attractions such as Central Park, Washington Square Park, Rockefeller Center, Times Square, the Bronx Zoo, the Botanical Garden , Fifth Avenue and Madison Avenue, the Tribeca Film Festival, and free shows in Central Park at Summerstage and the Delacorte Theater, The Statue of Liberty, etc.</p>
                     </div>
                 </div>
             </div>
@@ -183,7 +183,7 @@ function Citiescard() {
                 <div className="row no-gutters">
                     <div className="card-body">
                         <h5 className="card-title">Kuala, Lumpur</h5>
-                        <p className="card-text pl-2 mt-2">Kuala Lumpur es la capital de Malasia. En su moderno perfil, se destacan las Torres Petronas de 451 m de altura, un par de rascacielos cubiertos de vidrio y acero con diseños islámicos. Las torres también cuentan con una pasarela pública en altura y un mirador. La ciudad también alberga sitios icónicos de la era colonial británica, como la Estación de Tren de Kuala Lumpur y el Edificio del Sultán Abdul Samad.</p>
+                        <p className="card-text pl-2 mt-2">Standing out in its modern skyline are the 451m-high Petronas Twin Towers, a pair of skyscrapers covered in glass and steel with Islamic designs. The towers also have a high-rise public walkway and a lookout point. The city is also home to iconic sites from the British colonial era, such as the Kuala Lumpur Railway Station and the Sultan Abdul Samad Building.</p>
                     </div>
                 </div>
             </div>
@@ -206,7 +206,7 @@ function Citiescard() {
                 <div className="row no-gutters">
                     <div className="card-body">
                         <h5 className="card-title">Tokio, Japon</h5>
-                        <p className="card-text pl-2 mt-2">Japón cuenta con 19 sitios del patrimonio mundial, incluyendo el castillo de Himeji, los monumentos históricos de la antigua Kioto y Nara. Las atracciones turísticas más populares incluyen Tokio e Hiroshima, el Monte Fuji, estaciones de esquí como Niseko en Hokkaido, la isla de Okinawa, la variedad de templos religiosos, plazas, calles que reflejan el día a día de su gente y su evolución constante, así como mercados callejeros y sitios de comida famosos por sus exóticos platos.</p>
+                        <p className="card-text pl-2 mt-2">Japan has 19 World Heritage Sites, including Himeji Castle, the Historic Monuments of Ancient Kyoto, and Nara. The most popular tourist attractions are Tokyo and Hiroshima, Mount Fuji, ski resorts such as Niseko, the island of Okinawa, the variety of religious temples, squares, streets that reflect the daily life of its people and its constant evolution, as well as markets. streets and food places famous for their exotic dishes.</p>
                     </div>
                 </div>
             </div>
@@ -229,7 +229,7 @@ function Citiescard() {
                 <div className="row no-gutters">
                     <div className="card-body">
                         <h5 className="card-title">Estambul, Turkia</h5>
-                        <p className="card-text pl-2 mt-2">La variedad de estilos arquitectónicos y ambientes es el resultado de la mezcla de culturas y te transportarán a otras épocas y a rincones de algunas capitales europeas o de Oriente Medio. La mayoría de monumentos y lugares turístico se encuentran en la conocida como “península histórica”: el Gran Bazar, la Basílica Cisterna, el Palacio de Topkap, el Bazar Egipcio o de las Especias, la Mezquita de Süleyman e importantes museos como el arqueológico, el de las alfombras o el de arte turco e islámico.</p>
+                        <p className="card-text pl-2 mt-2">The variety of architectural styles and environments is the result of the mixture of cultures and corners of some European or Middle Eastern capitals. Most of the monuments and tourist attractions are located in the "historic peninsula": the Grand Bazaar, the Basilica Cistern, the Topkap Palace, the Egyptian or Spice Bazaar, the Süleyman Mosque and important museums such as the archaeological, the carpets or Turkish and Islamic art.</p>
                     </div>
                 </div>
             </div>

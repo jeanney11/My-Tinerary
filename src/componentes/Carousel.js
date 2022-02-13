@@ -47,12 +47,12 @@ function carousel() {
             <div className="cards_body">
               <img src={BoraBora} className="cards_image"  />
               <h2 className="cards_title">Bora-Bora</h2>
-              <p className="cards_description">Es una isla del Pacífico Sur al noroeste de Tahití en la Polinesia Francesa. Rodeada de islotes y una laguna turquesa protegida por un arrecife de coral.</p>
+              <p className="cards_description">It is a South Pacific island northwest of Tahiti in French Polynesia. Surrounded by islets and a turquoise lagoon protected by a coral reef.</p>
             </div>
             <button className="cards_btn"><a href="https://www.youtube.com/watch?v=r1lqRWqwg10">See More</a></button>
             <div className="cards_costo">
-              <h2>4900$ 2 x personas</h2>
-              <h4>7 días / 6 noches</h4>
+              <h2>4900$ 2 x person</h2>
+              <h4>7 day / 6 night</h4>
             </div>
           </div>
         </div>
@@ -62,12 +62,12 @@ function carousel() {
             <div className="cards_body">
               <img src={CraigievarCastle} className="cards_image" />
               <h2 className="cards_title">Craigievar Castle</h2>
-              <p className="cards_description">El castillo de Craigievar es un castillo con la fachada rosada que se encuentra a unos 9,6 km al sur de Alford, en el condado de Aberdeenshire, en Escocia.</p>
+              <p className="cards_description">Craigievar Castle is a pink-fronted castle about 6 miles south of Alford, in the county of Aberdeenshire, Scotland.</p>
             </div>
             <button className="cards_btn"><a href="https://www.nts.org.uk/visit/places/craigievar">See More</a></button>
             <div className="cards_costo">
-              <h2>600$ x 2 personas</h2>
-              <h4>1 días</h4>
+              <h2>600$ x 2 person</h2>
+              <h4>1 day</h4>
             </div>
           </div>         
         </div>
@@ -77,12 +77,12 @@ function carousel() {
             <div className="cards_body">
               <img src={Hakoya} className="cards_image" />
               <h2 className="cards_title">Hakoya</h2>
-              <p className="cards_description">El Hakoya 3,69 kilómetros cuadrados Sandnessundet isla situada en el estrecho entre las islas y Kvaloya Tromsoya en el condado de Troms, Noruega.</p>
+              <p className="cards_description">The Hakoya 3.69 square kilometer Sandnessundet island located in the strait between the Tromsoya and Kvaloya islands in Troms County, Norway.</p>
             </div>
             <button className="cards_btn"><a href="https://www.shutterstock.com/es/search/hakoya">See More</a></button>
             <div className="cards_costo">
-              <h2>1900$ x 2 personas</h2>
-              <h4>4 días / 3 noches</h4>
+              <h2>1900$ x 2 persons</h2>
+              <h4>4 day / 3 night</h4>
             </div>
           </div>         
         </div>
@@ -92,12 +92,12 @@ function carousel() {
             <div className="cards_body">
               <img src={Cancun} className="cards_image" />
               <h2 className="cards_title">Cancún</h2>
-              <p className="cards_description">Cancún ubicada en la península de Yucatán, México; limitada con el mar Caribe y  es conocida por sus playas, centros turísticos y vida nocturna.</p>
+              <p className="cards_description">Cancun located in the Yucatan Peninsula, Mexico; bordered by the Caribbean Sea and is known for its beaches, resorts and nightlife.</p>
             </div>
             <button className="cards_btn"><a href="https://www.youtube.com/watch?v=cLx6HKhgRgc">See More</a></button>
             <div className="cards_costo">
-              <h2>3900$ x 2 personas</h2>
-              <h4>5 días / 4 noches</h4>
+              <h2>3900$ x 2 persons</h2>
+              <h4>5 day / 4 night</h4>
             </div>
           </div>         
         </div>
@@ -107,12 +107,12 @@ function carousel() {
             <div className="cards_body">
               <img src={Orlando} className="cards_image" />
               <h2 className="cards_title">Orlando, Florida</h2>
-              <p className="cards_description">Situado en el centro de Florida, alberga más de una docena de parques temáticos que ofrecen un entretenimiento fantástico para todos.</p>
+              <p className="cards_description">Located in central Florida, it is home to more than a dozen theme parks offering fantastic entertainment for everyone.</p>
             </div>
             <button className="cards_btn"><a href="https://www.youtube.com/watch?v=fG0lSiYtPgI">See More</a></button>
             <div className="cards_costo">
-              <h2>2900$ x 3 personas</h2>
-              <h4>7 días / 6 noches</h4>
+              <h2>2900$ x 3 persons</h2>
+              <h4>7 day / 6 night</h4>
             </div>
           </div>         
         </div>
@@ -122,12 +122,12 @@ function carousel() {
             <div className="cards_body">
               <img src={SelvaNegra} className="cards_image" />
               <h2 className="cards_title">Selva Negra</h2>
-              <p className="cards_description">Esta región alemana está localizada junto al Valle del Rhin y se caracteriza por sus extensos bosques de abetos y pinos. </p>
+              <p className="cards_description">This German region is located next to the Rhine Valley and is characterized by its extensive fir and pine forests. </p>
             </div>
             <button className="cards_btn"><a href="https://www.viajandoporelmundomundial.com/pueblos-mas-bonitos-selva-negra/">See More</a></button>
             <div className="cards_costo">
-              <h2>2300$ x 2 personas</h2>
-              <h4>5 días / 4 noches</h4>
+              <h2>2300$ x 2 persons</h2>
+              <h4>5 day / 4 night</h4>
             </div>
           </div>         
         </div>

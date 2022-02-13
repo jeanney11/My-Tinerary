@@ -19,7 +19,7 @@ function Home() {
           <img src={portada3} width="100%" height="400" alt="..." />
           <h1 className="texto"> Royal Travel</h1>
         </div>
-        <div><h2 className="textos"> "Viajar es Vivir"</h2></div>
+        <div><h2 className="textos"> "to Travel is to Live"</h2></div>
         </div>
       <div className="Descripcion">
           <h2>TOP CITIES</h2>
