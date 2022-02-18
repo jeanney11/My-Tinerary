@@ -1,23 +1,27 @@
 import React from "react";
 
+
 import Carousel from "../componentes/Carousel";
 
 import CardsCity from "../componentes/CardsCity";
 import Search from "./Search";
 import Itinerary from "../componentes/Itinerary";
 import CityFilter from "../componentes/CityFilter";
+import HeadCities from "../componentes/HeadCities";
 
-function Cities(props) {
-  const cities = props.data;
-  console.log(props);
+function Cities() {
+  
+  
 
   return (
     <div>
+
+     <HeadCities/>
       <Search />
 
       <div className="Filtro">
         <div className=" row row-cols-1 row-cols-md-4 g-4">
-          <CardsCity cities={cities} />
+          <CardsCity/>
         </div>
       </div>
 

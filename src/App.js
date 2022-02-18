@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 
+import { actionType } from "./reducer";
+import { useStateValue } from "./StateProvider";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -13,19 +15,32 @@ import City  from "./componentes/City";
 import axios from "axios";
 
 function App() {
-  const pasoUnaPropiedad = "Ver ejemplo de props"
-const data =[]
+  const [{cities, itineraries}, dispatch]=useStateValue()
+  
+
   async function test(){
 
   }
   useEffect(() => {
+
     axios.get("http://localhost:4000/api/datos")
   .then(response =>{
+    dispatch({
+      type:actionType.CITIESDB,
+      cities:response.data.response.cities
+    })
+    axios.get("http://localhost:4000/api/itinerary")
+    .then(response => {
+      dispatch({
+         type:actionType.ITINERARIESDB,
+         itineraries: response.data.response.itinerary
+       })
+       console.log(itineraries)
+     });
     
-    data.push(...response.data.response.cities)
-    console.log(data)
-    console.log(response)
+    
   })
+
 
   },[])
   
@@ -37,10 +52,10 @@ const data =[]
 
       <Routes>
         <Route path="/" element={ <Home />}/>
-        <Route path="/cities"  element= {<Cities data={data} otraProps = {pasoUnaPropiedad} />}/>
+        <Route path="/cities"  element= {<Cities/>}/>
         <Route path="/SignUp" element= {<SignUp/>}/>
         <Route path="/SignIn" element={<SignIn/>}/>
-        <Route path="/City" element ={<City/>}/>
+        <Route path="/city/:id" element ={<City/>}/>
       </Routes>
 
       <Footer />

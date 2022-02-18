@@ -12,6 +12,7 @@ const citiesSchema = new mongoose.Schema({
      demonym:{type:String, require:true},
      duration:{type:String, require:true},
      img:{type:String, require:true},
+     flag:{type:String, require:true},
 })
 const City = mongoose.model("cities",citiesSchema)
 

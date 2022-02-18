@@ -6,9 +6,13 @@ import Iguazu from "../imagenes/FotoFiltro/Iguazu.jpg";
 import logo4 from "../imagenes/logo4.jpg";
 
 
-function HeadCity(){
+function HeadCity(props){
+  const city=props.citySelecter
+  console.log(city)
+
 
     return(
+      city.map(data=>
  <div className="bodyCity">   
 <div className="containerCity">
   <div className="row ">
@@ -19,13 +23,13 @@ function HeadCity(){
         <div className="col-md-4">
           <div className="profile-card text-center">
 
-            <img className="img-responsive" src={Iguazu}/>
+            <img className="img-responsive" src={process.env.PUBLIC_URL + `/ImagenFilter/CityImg/${data.img}`}/>
             <div className="profile-info">
 
-              <img className="profile-pic" src={logo4}/>
+              <img className="profile-pic" src={process.env.PUBLIC_URL + `/ImagenFilter/CityImg/${data.flag}`}/>
 
-              <h2 className="hvr-underline-from-center">Cataratas de Iguazu<span>Argentina</span></h2>
-              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+              <h2 className="hvr-underline-from-center">{data.name}<span>{data.country}</span></h2>
+              <div>{data.description}</div>
              
             </div>
           </div>
@@ -36,6 +40,7 @@ function HeadCity(){
   </div>
 </div>
 </div>
+)
 
     );
 }

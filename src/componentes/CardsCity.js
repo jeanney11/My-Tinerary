@@ -1,13 +1,14 @@
 import { ReactElement } from "react";
 import React from "react";
 import { Link as Linkrouter } from "react-router-dom";
+import { useStateValue } from "../StateProvider";
 import comentario from "../imagenes/comentario.jpg";
 import like from "../imagenes/like.png";
 import bottum from "../imagenes/bottum.png";
 
-function CardsCity(props) {
-  console.log(props.cities);
-  const cities = props.cities;
+function CardsCity() {
+  const [{cities}, dispatch]=useStateValue()
+  console.log(cities)
   return (
     <>
       {cities.map((city) => (
@@ -35,7 +36,7 @@ function CardsCity(props) {
               <div className="value">5</div>
             </div>
             <div className="stat btn">
-              <Linkrouter to="/City">
+              <Linkrouter to={`/City/${city._id}`}>
                 <div className="type">
                   <img src={bottum} width="40" height="40" alt="..." />
                 </div>
