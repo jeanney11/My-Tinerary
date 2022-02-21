@@ -1,5 +1,5 @@
-
-
+/* background-size: cover;  (para no repetir la imagen)*/
+/* background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); */
 
 
 
@@ -536,6 +536,13 @@ background: white;
 
 /*--------   Search  --------*/ 
 
+.wrapperS{
+  background-image: url("https://www.hofmann.es/blog/wp-content/uploads/2018/02/mapa-y-manos.jpg");   
+  background-size: cover;
+  height: 300px;
+  margin-bottom: 40px;
+
+}
 
 .header{
 	width: 1000px;
@@ -560,8 +567,9 @@ background: white;
 }
 
 .search_wrap{
+  padding-top: 120px;
 	width: 500px;
-	margin: 38px auto;
+	margin: 1px auto;
   
 }
 
@@ -763,7 +771,7 @@ margin-bottom: 60px;
 }
 
 .sp-card-3 {
-  width: 550px;
+  width:650px;
   height: 390px;
   border: 1px solid #242323;
   border-radius: 10px;
@@ -781,7 +789,7 @@ margin-bottom: 60px;
   font-size: 25px;
   padding: 10px 15px 0px;
   text-align: right;
-  width: 40%;
+  /*width: 40%;*/
   float: right;
 }
 
@@ -808,7 +816,7 @@ margin-bottom: 60px;
       }
 
 .sp-card-3 .buy-btn {
-      padding: 0px 35px 45px 0;
+      padding: 0px 35px 45px 20px;
   }
 
 .sp-card-3 .buy-btn a {
@@ -819,6 +827,10 @@ margin-bottom: 60px;
           background-color: rgb(162, 72, 235);;
           color:#fff;
       }
+      
+.sp-card-3 .cart-btn {
+  padding: 0px 35px 45px 20px;
+}
 
 .sp-card-3 .cart-btn a {
           text-decoration: none;
@@ -1421,7 +1433,7 @@ margin-bottom: 60px;
 
 /*----- HeadCities -------*/
 
-body {
+/* body {
   background: #252525;
 }
 
@@ -1541,4 +1553,4 @@ body {
       font-weight: bolder;
     }
   }
-}
+} */

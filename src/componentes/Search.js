@@ -5,7 +5,7 @@ import Escocia from "../imagenes/Escocia.jpg";
 function Search() {
   return (
     
-      <div className="wrapper">
+      <div className="wrapperS">
         <div className="container">
           <div className="search_wrap search_wrap_6"> 
             <div class="search_box">

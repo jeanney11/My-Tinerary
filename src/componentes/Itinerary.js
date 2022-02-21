@@ -7,29 +7,30 @@ function Itinerary(props) {
 
   return (
     <>
-    {itinerarios.map((itin)=>( 
-    
-    <div>
-              
+       {itinerarios.map((itin)=>(        
       <div className="Paseos">
+      
         <div className="sp-card-3 m-4">
+        
+          
           <div className="card-title">{itin.name}</div>
-
+          
           <ul className="product-details">
-            <li className="product-img">
-              <img src={Cancun} />
+            <li className="product-img" height={200} width={500}>
+              <img src={process.env.PUBLIC_URL + `/ImagenFilter/ItinerayImg/${itin.img1}`} />
             </li>
 
-            <li className="product-description">
-              <img src={Cancun} />
+            <li className="product-description" height={200} width={500}>
+              <img src={process.env.PUBLIC_URL + `/ImagenFilter/ItinerayImg/${itin.img2}`} />
             </li>
           </ul>
 
           <ul className="footer-Card">
+          
             <li>
               <div className="buy-btn">
                 <a href="#" title="Buy Now">
-                  Price
+                 {itin.price} 
                 </a>
               </div>
               <div className="cart-btn">
@@ -37,20 +38,25 @@ function Itinerary(props) {
                   Comments
                 </a>
               </div>
+              
             </li>
 
             <li>
+              
               <p>
-                This product comes with two years of warrenty. This camera is
-                best suitable for personal and professional use.
+                {itin.description}
               </p>
-              <span>DAY 1</span>
+              <span>{itin.time}</span>
+              
             </li>
           </ul>
+          
+          
         </div>
+         
       </div>
-    </div>
-     ))} 
+      ))}
+     
     </>
   );
 }

@@ -16,7 +16,7 @@ function Cities() {
   return (
     <div>
 
-     <HeadCities/>
+     
       <Search />
 
       <div className="Filtro">
