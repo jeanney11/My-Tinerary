@@ -9,6 +9,7 @@ import bottum from "../imagenes/bottum.png";
 function CardsCity() {
   const [{cities}, dispatch]=useStateValue()
   console.log(cities)
+
   return (
     <>
       {cities.map((city) => (

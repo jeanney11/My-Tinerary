@@ -3,7 +3,8 @@ import React from "react";
 import Cancun from "../imagenes/Cancun.jpg";
 
 function Itinerary(props) {
-  const itinerarios = props.itinerarySelecter
+  const itinerarios = props.itineraries
+  console.log(itinerarios)
 
   return (
     <>

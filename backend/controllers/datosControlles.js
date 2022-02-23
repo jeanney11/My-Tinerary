@@ -1,7 +1,7 @@
 const Cities = require("../models/cities.js")
 const Itinerary = require("../models/itinerary.js")
 
-const citiesController = {
+const datosController = {
     ObtenerTodosLosDatos:async(req,res) =>{
         let cities
         let error = null
@@ -23,15 +23,17 @@ const citiesController = {
     }, //req= require ; res= response
      
     ObtenerItinerarios:async(req,res)=>{
-        console.log(res)
+        console.log(req.params)
         let itinerary;
+
+        const city = req.params.city
         let error = null
         try {
-            itinerary = await Itinerary.find()
-            console.log(itinerary)
+            itinerary = await Itinerary.find({city:city})
+            //console.log(itinerary)
         } catch (err){
             error = err
-            console.log(error)
+           // console.log(error)
         } 
         res.json({
             response:error?"ERROR":{itinerary},
@@ -42,4 +44,4 @@ const citiesController = {
     }
 }
 
-module.exports = citiesController
+module.exports = datosController
