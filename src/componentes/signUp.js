@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {Link as Linkrouter} from "react-router-dom";
+import axios from 'axios';
 
 function Copyright() {
   return (
@@ -79,6 +80,20 @@ const useStyles = makeStyles((theme) => ({
 export default function SignUp() {
   const classes = useStyles();
 
+ async function NewUser(event){
+   event.preventDefault()
+   const NuevoUsuario = {firstname:event.target[0].value,
+                         lastname:event.target[2].value,
+                         email:event.target[4].value,
+                         password:event.target[6].value}
+  
+   
+ 
+
+  await axios.post("http://localhost:4000/api/signup",{NuevoUsuario} )
+  .then(response=>alert(response.data.response))
+ }
+
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
@@ -91,7 +106,7 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Sign Up
           </Typography>
-          <form className={classes.form} noValidate>
+          <form className={classes.form} noValidate onSubmit={NewUser}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
             
