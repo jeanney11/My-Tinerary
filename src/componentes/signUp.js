@@ -91,7 +91,21 @@ export default function SignUp() {
  
 
   await axios.post("http://localhost:4000/api/signup",{NuevoUsuario} )
-  .then(response=>alert(response.data.response))
+  .then(response=> //alert(response.data.response))
+
+  // if(response.success==="falseVAL"){
+
+  //  console.log(response.data)
+  // }
+  
+  displayMessages(response.data)
+)
+function displayMessages(data){
+  if(data.success==="falseVAL"){
+console.log(data.response.error.details)
+    data.response.error.details.map(error=>alert(error.message))
+  }
+}
  }
 
   return (
