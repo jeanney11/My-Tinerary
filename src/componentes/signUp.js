@@ -102,8 +102,9 @@ export default function SignUp() {
 )
 function displayMessages(data){
   if(data.success==="falseVAL"){
+    console.log(data)
 console.log(data.response.error.details)
-    data.response.error.details.map(error=>alert(error.message))
+alert(data.response.error.details.map(error=>error.message))
   }
 }
  }

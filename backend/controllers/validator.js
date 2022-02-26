@@ -17,12 +17,11 @@ const Schema=joi.object({
     email:joi.string().email({minDomainSegments:2}).required().messages({
         "string.email":"Formato de correo no valido"
     }),
-    password:joi.string().max(30).min(6).trim().pattern(new RegExp("^[a-zA-Z0-9]+$"))
-    .required().messages({
-
-       // "string.min":"La contraseña debe contener minimo 6 caracteres",
-        //"string.alphanum":"La contraseña debe ser alfanumerica"
-    }),
+    password:joi.string().max(20).min(6).pattern(/(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])/).required().messages({
+        "string.pattern.base":"La contraseña debe contener minimo una mayuscula, una minuscula y un numero",
+        "string.min":"La contraseña debe contener minimo 6 caracteres alfanumericos",
+        "string.max":"La contraseña no debe exceder de 30 caracteres alfanumericos"
+    }),  
 
 })
 const validation = Schema.validate(req.body.NuevoUsuario,{abortEarly:false})
