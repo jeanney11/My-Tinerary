@@ -4,11 +4,12 @@ const { nuevoUsuario } = require("./usersControllers")
 const validator = (req,res,next)=>{ 
     console.log(req.body.NuevoUsuario) 
 const Schema=joi.object({
-    firstname:joi.string().max(10).min(3).trim().pattern(new RegExp("[a-zA-Z]")).required().messages({
+    firstname:joi.string().max(40).min(3).trim().pattern(new RegExp("[a-zA-Z]")).required().messages({
 
         "string.min":"Nombre debe contener minimo 3 caracteres",
         "string.empty":"El campo no puede estar vacio"
     }),
+    
     lastname:joi.string().max(20).min(3).trim().pattern(new RegExp("[a-zA-Z]")).required().messages({
 
         "string.min":"Apellido debe contener minimo 3 caracteres",
@@ -22,6 +23,7 @@ const Schema=joi.object({
         "string.min":"La contraseña debe contener minimo 6 caracteres alfanumericos",
         "string.max":"La contraseña no debe exceder de 30 caracteres alfanumericos"
     }),  
+    from: joi.string()
 
 })
 const validation = Schema.validate(req.body.NuevoUsuario,{abortEarly:false})

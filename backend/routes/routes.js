@@ -1,8 +1,8 @@
 const Router = require("express").Router();
-const datosController = require("../controllers/datosControlles")
+const datosController = require("../controllers/datosControlles");
 const{ObtenerTodosLosDatos,ObtenerItinerarios}= datosController   // destructuracion del controlador   
 const usersControllers = require ("../controllers/usersControllers")
-const {nuevoUsuario} = usersControllers
+const {nuevoUsuario, verifyEmail, accesoUsuario,cerrarSesion} = usersControllers
 const validator = require ("../controllers/validator")
 
 Router.route("/datos") // parte de la url de consulta
@@ -13,5 +13,14 @@ Router.route("/itinerary/:city")
 
 Router.route("/signup")
 .post(validator,nuevoUsuario)
+
+Router.route("/verify/:uniqueText")
+.get(verifyEmail)
+
+Router.route("/signIn")
+.post(accesoUsuario)
+
+Router.route("/SignOut")
+.post(cerrarSesion)
 
 module.exports = Router

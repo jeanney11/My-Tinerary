@@ -55,6 +55,7 @@ function App() {
         <Route path="/cities"  element= {<Cities/>}/>
         <Route path="/SignUp" element= {<SignUp/>}/>
         <Route path="/SignIn" element={<SignIn/>}/>
+        
         <Route path="/city/:id" element ={<City/>}/>
       </Routes>
 

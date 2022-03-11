@@ -4,8 +4,28 @@ import { FarBee } from "react-icons/fa";
 import logo4 from "../imagenes/logo4.jpg";
 import Facebook from "../imagenes/Facebook.jpg";
 import { Link as LinkRouter } from "react-router-dom";
+import axios from "axios";
+import { actionType } from "../reducer";
+import { useStateValue } from "../StateProvider";
+
+
 
 function NavBar() {
+  const [{user},dispatch]=useStateValue()
+  
+
+  async function SignOut(){
+    const email=user.datosUser.email
+    await axios.post("http://localhost:4000/api/SignOut",{email})
+    .then(response =>
+      console.log(response))
+      dispatch({
+        type:actionType.USERDB,
+        user: null
+
+      })
+  }
+
   return (
     <nav className="navegacion navbar navbar-light bg-light">
       <div className="col-4">
@@ -30,32 +50,32 @@ function NavBar() {
           </LinkRouter>
         </form>
       </div>
-      <div className="col-2">
-        <a className="d-grid gap-2 d-md-flex justify-content-md" href="#">
+      <div className="col-2"> <a className="d-grid gap-2 d-md-flex justify-content-md" href="#">
           <div className="btn-group" role="group">
-            <button
-              id="btnGroupDrop1"
-              type="button"
-              className="btn btn-transparent dropdown"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
+            <button id="btnGroupDrop1" type="button"className="btn btn-transparent dropdown"data-bs-toggle="dropdown" aria-expanded="false">
               <MaterialIcon icon="person_pin" color="#004e92" size="large" />
             </button>
 
             <ul className="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              
               <li>
-              <LinkRouter to="/signUp">
-                <a className="dropdown-item" href="#">
+              <LinkRouter to="/signUp"><a className="dropdown-item" href="#">
                   SignUp
                 </a> </LinkRouter>
               </li>
               <li>
-              <LinkRouter to="/SignIn">
-                <a className="dropdown-item" href="#">
+              <LinkRouter to="/SignIn"><a className="dropdown-item" href="#">
                   SignIn
                 </a> </LinkRouter>
               </li>
+              <li>
+               
+              <button onClick={SignOut}>
+                <a className="dropdown-item" href="#">
+                  SignOut
+                </a> </button>
+              </li>
+
             </ul>
           </div>
         </a>
