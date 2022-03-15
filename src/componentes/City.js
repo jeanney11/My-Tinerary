@@ -8,6 +8,7 @@ import TitleCity from "./TitleCity";
 import { useParams } from "react-router-dom";
 import { AddBoxOutlined } from "@material-ui/icons";
 import axios from "axios";
+import Comments from "./Comments";
 
 
 
@@ -37,7 +38,8 @@ citySelecter.map(city=>
         <HeadCity citySelecter={citySelecter}/>
         <InfoCity citySelecter={citySelecter}/>
         <TitleCity/>
-        <Itinerary itineraries={itineraries}/>    
+        <Itinerary itineraries={itineraries}/>   
+        <Comments/> 
         
         {/* itinerarySelecter={itinerarySelecter} */}
         

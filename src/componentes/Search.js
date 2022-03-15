@@ -3,7 +3,7 @@ import { actionType } from "../reducer";
 import {useStateValue} from "../StateProvider";
 
 function Search() {
-  const [{cities},dispatch]= useStateValue
+  const [{cities},dispatch]= useStateValue()
   const imputSearch=(event)=>{
     dispatch({
       type:actionType.FILTER,

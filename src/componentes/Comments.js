@@ -5,6 +5,8 @@ import { EventRounded } from "@material-ui/icons";
 import axios from "axios";
 
 
+
+
 function Comments(props){
     const [{user},dispatch]=useStateValue()
 
@@ -23,91 +25,109 @@ function Comments(props){
     }
 
     return(
-        /*Contenedor Principal*/
+       /*Contenedor Principal*/
         <div className="bodyComments">
         <div className="comments-container">
-            <h1>Comentarios </h1>
+             <h1>Comentarios </h1>
     
-            <ul id="comments-list" className="comments-list">
-                <li>
-                    <div className="comment-main-level">
-        {/*Avatar*/}
-                        <div className="comment-avatar"><img src={Avatar1}/></div>
-        {/*Contenedor del Comentario*/}
-                        <div className="comment-box">
-                            <div className="comment-head">
-                                <h6 className="comment-name by-author"><a href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
-                                <span>hace 20 minutos</span>
-                                <i className="fa fa-reply"></i>
-                                <i className="fa fa-heart"></i>
+             <ul id="comments-list" className="comments-list">
+                 <li>
+                     <div className="comment-main-level">
+         {/*Avatar*/}
+                         {/* <div className="comment-avatar"><img src={Avatar1}/></div> */}
+         {/*Contenedor del Comentario*/}
+                         <div className="comment-box">
+                             <div className="comment-head">
+                                 <h6 className="comment-name by-author"><a href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
+                                 <span>hace 20 minutos</span>
+                                 <i className="fa fa-reply"></i>
+                                 <i className="fa fa-heart"></i>
                             </div>
-                            <div className="comment-content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                            </div>
-                        </div>
-                    </div>
-        {/*-- Respuestas de los comentarios --*/}
-                    <ul className="comments-list reply-list">
+                             <div className="comment-content">
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                             </div>
+                         </div>
+                     </div>
+         {/*-- Respuestas de los comentarios --*/}
+                     <ul className="comments-list reply-list">
                         <li>
-        {/*-- Avatar --*/}
-                            <div className="comment-avatar"><img src={Avatar2} alt=""/></div>
-        {/*-- Contenedor del Comentario --*/}
-                            <div className="comment-box">
-                                <div className="comment-head">
-                                    <h6 className="comment-name"><a href="http://creaticode.com/blog">Lorena Rojero</a></h6>
-                                    <span>hace 10 minutos</span>
-                                    <i className="fa fa-reply"></i>
-                                    <i className="fa fa-heart"></i>
-                                </div>
-                                <div className="comment-content">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                                </div>
-                            </div>
-                        </li>
+         {/*-- Avatar --*/}
+                             {/* <div className="comment-avatar"><img src={Avatar2} alt=""/></div> */}
+         {/*-- Contenedor del Comentario --*/}
+                             <div className="comment-box">
+                                 <div className="comment-head">
+                                     <h6 className="comment-name"><a href="http://creaticode.com/blog">Lorena Rojero</a></h6>
+                                     <span>hace 10 minutos</span>
+                                     <i className="fa fa-reply"></i>
+                                     <i className="fa fa-heart"></i>
+                                 </div>
+                                 <div className="comment-content">
+                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                                 </div>
+                             </div>
+                         </li>
     
-                        <li>
+                         <li>
         {/*-- Avatar --*/}
-                            <div className="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""/></div>
-        {/*-- Contenedor del Comentario --*/}
-                            <div className="comment-box">
-                                <div className="comment-head">
-                                    <h6 className="comment-name by-author"><a href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
-                                    <span>hace 10 minutos</span>
-                                    <i className="fa fa-reply"></i>
-                                    <i className="fa fa-heart"></i>
-                                </div>
-                                <div className="comment-content">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
+                             <div className="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_1_zps8e1c80cd.jpg" alt=""/></div>
+         {/*-- Contenedor del Comentario --*/}
+                             <div className="comment-box">
+                                 <div className="comment-head">
+                                     <h6 className="comment-name by-author"><a href="http://creaticode.com/blog">Agustin Ortiz</a></h6>
+                                     <span>hace 10 minutos</span>
+                                     <i className="fa fa-reply"></i>
+                                     <i className="fa fa-heart"></i>
+                                 </div>
+                                 <div className="comment-content">
+                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                                 </div>
+                             </div>
+                         </li>
+                     </ul>
+                 </li>
     
-                <li>
-                    <div className="comment-main-level">
-        {/*-- Avatar --*/}
-                        <div className="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg" alt=""/></div>
-        {/*-- Contenedor del Comentario --*/}
-                        <div className="comment-box">
-                            <div class="comment-head">
-                                <h6 className="comment-name"><a href="http://creaticode.com/blog">Lorena Rojero</a></h6>
-                                <span>hace 10 minutos</span>
-                                <i className="fa fa-reply"></i>
-                                <i className="fa fa-heart"></i>
+                 <li>
+                     <div className="comment-main-level">
+         {/*-- Avatar --*/}
+                         <div className="comment-avatar"><img src="http://i9.photobucket.com/albums/a88/creaticode/avatar_2_zps7de12f8b.jpg" alt=""/></div>
+         {/*-- Contenedor del Comentario --*/}
+                         <div className="comment-box">
+                             <div class="comment-head">
+                                 <h6 className="comment-name"><a href="http://creaticode.com/blog">Lorena Rojero</a></h6>
+                                 <span>hace 10 minutos</span>
+                                 <i className="fa fa-reply"></i>
+                                 <i className="fa fa-heart"></i>
                             </div>
-                            <div className="comment-content">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+                             <div className="comment-content">
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit omnis animi et iure laudantium vitae, praesentium optio, sapiente distinctio illo?
+                             </div>
+                         </div>
+                     </div>
+                 </li>
+             </ul>
+         </div>
        
-    </div>
-    );
+     </div>
+     );
 
+
+// //     <div class="row body">
+// //     <form action="#">
+// //       <ul>
+// //         <li>
+// //           <label for="comments">comments</label>
+// //           <textarea cols="46" rows="3" name="comments"></textarea>
+// //         </li>
+        
+       
+// //           <input class="btn btn-submit" type="submit" value="Submit" />
+// //           <small>or press <strong>enter</strong></small>
+        
+        
+// //       </ul>
+// //     </form>  
+// //   </div>
+//     );
 }
 
 export default Comments;

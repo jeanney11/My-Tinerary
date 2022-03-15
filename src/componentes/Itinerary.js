@@ -57,6 +57,7 @@ function Itinerary(props) {
         </div>
          
       </div>
+
       ))}
      
     </>
