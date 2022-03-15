@@ -16,6 +16,8 @@ import { Link as Linkrouter } from "react-router-dom";
 import axios from "axios";
 import { actionType } from "../reducer";
 import { useStateValue } from "../StateProvider";
+import FacebIn from "../componentes/SignInBoton/FacebIn"
+
 
 function Copyright() {
   return (
@@ -76,6 +78,7 @@ export default function SignIn() {
     const userData = {
       email: event.target[0].value,
       password: event.target[2].value,
+      from:"signin",
     };
 
     await axios.post("http://localhost:4000/api/signIn", { userData })
@@ -157,6 +160,8 @@ export default function SignIn() {
             >
               Sign In
             </Button>
+          <FacebIn/>
+
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">

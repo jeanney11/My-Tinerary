@@ -30,7 +30,7 @@ const responseFacebook = async(response) => {
   );
   function displayMessages(data) {
     if (data.success === "falseVAL") {
-      console.log(data);
+      //console.log(data);
       console.log(data.response.error.details);
       alert(data.response.error.details.map((error) => error.message));
     } else if (data.success === true) {

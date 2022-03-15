@@ -12,10 +12,11 @@ import Box from "@material-ui/core/Box";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-
+import GoogleLogin from "react-google-login";
 import { Link as Linkrouter } from "react-router-dom";
 import axios from "axios";
 import Faceb from "./SignUpBoton/Faceb";
+import Google from "./SignUpBoton/Google";
 
 function Copyright() {
   return (
@@ -87,7 +88,7 @@ export default function SignUp() {
       lastname: event.target[2].value,
       email: event.target[4].value,
       password: event.target[6].value,
-      from:"signup",
+      from: "signup",
     };
 
     await axios.post("http://localhost:4000/api/signup", { NuevoUsuario }).then(
@@ -108,8 +109,8 @@ export default function SignUp() {
         alert(data.response.error.details.map((error) => error.message));
       } else if (data.success === true) {
         console.log(data);
-      }else if (data.suceess === false){
-        console.log(data)
+      } else if (data.suceess === false) {
+        console.log(data);
       }
     }
   }
@@ -192,9 +193,10 @@ export default function SignUp() {
             >
               Sign Up
             </Button>
-
-            <Faceb/>
-
+            
+            
+            <Faceb />
+ 
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Linkrouter to="/SignIn" variant="body2">

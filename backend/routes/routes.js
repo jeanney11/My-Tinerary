@@ -1,4 +1,5 @@
 const Router = require("express").Router();
+const { cargarComentarios } = require("../controllers/comentariosControllers.js");
 const datosController = require("../controllers/datosControlles");
 const{ObtenerTodosLosDatos,ObtenerItinerarios}= datosController   // destructuracion del controlador   
 const usersControllers = require ("../controllers/usersControllers")
@@ -22,5 +23,8 @@ Router.route("/signIn")
 
 Router.route("/SignOut")
 .post(cerrarSesion)
+
+Router.route("/comment")
+.post(cargarComentarios)
 
 module.exports = Router

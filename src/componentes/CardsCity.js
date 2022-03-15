@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+
 import React from "react";
 import { Link as Linkrouter } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
@@ -7,12 +7,12 @@ import like from "../imagenes/like.png";
 import bottum from "../imagenes/bottum.png";
 
 function CardsCity() {
-  const [{cities}, dispatch]=useStateValue()
-  console.log(cities)
+  const [{filterCity},dispatch]=useStateValue()
+  //console.log(filterCity)
 
   return (
     <>
-      {cities.map((city) => (
+      {filterCity?.map((city) => (
         <div className="Cards w-20">
           <img
             src={process.env.PUBLIC_URL + `/ImagenFilter/CityImg/${city.img}`}

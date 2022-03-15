@@ -60,7 +60,21 @@ const usersControllers = {
             const UsuarioExiste= await User.findOne({email})
 
             if (UsuarioExiste){
-                res.json({success:false, response:"Usuario ya existe, realice el SignIn"})
+                //res.json({success:false, response:"Usuario ya existe, realice el SignIn"})
+
+                // if(google){
+                //     UsuarioExiste.password = passwordHash
+                //     UsuarioExiste.emailVerificado = true
+                //     UsuarioExiste.google =true
+                //     UsuarioExiste.connected = false
+                    
+                //     UsuarioExiste.save()
+                //     res.json({success: true, from:"google", response:"Actualizamos tu SignUp para que los puedas realizar con Google"})
+                // } else{
+                //     res.json({response: false, from:"Signup",response: "Este email ya esta en uso"})
+
+                // } 
+
                 if (from !== "signup"){
                     const passwordHash = bcryptjs.hashSync(password,10)
                     UsuarioExiste.password = passwordHash
@@ -73,6 +87,7 @@ const usersControllers = {
                     res.json({ success:false, response:"El nombre de usuario ya esta en uso"})
                 }
             }
+
 
             else{
                 const uniqueText=crypto.randomBytes(15).toString("hex")// genera un texto de 15 caracteres hexagesimal
@@ -90,7 +105,7 @@ const usersControllers = {
                 })
 
 
-                if (from !== "signup"){
+                if (from!=="signup"){
                     NewUser.emailVerificado = true
                     NewUser.from = from
                     NewUser.connected = false
@@ -102,7 +117,7 @@ const usersControllers = {
                     NewUser.connected = false
                     await NewUser.save()
                     await sendEmail(email,uniqueText)
-                    res.json({success:true, response: "Se ha enviado un correo electronico para verificar su email"})
+                    res.json({success:"trueUE", response: "Se ha enviado un correo electronico para verificar su email", data:{NewUser}})
                 }
                 
                 
@@ -111,7 +126,7 @@ const usersControllers = {
 
         }
 
-        catch(error){res.json({success:"falseUE",response:null,error:error})}
+        catch(error){res.json({success:"falseVAL", form:"singup", response:"El correo ya esta en uso",error:error})}
         
     
     },
@@ -150,7 +165,7 @@ const usersControllers = {
 
      cerrarSesion: async(req,res) => {
          const email = req.body.email
-         console.log(req.body.email)
+         //console.log(req.body.email)
 
          const user = await User.findOne({email})
         user.connected = false

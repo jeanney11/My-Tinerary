@@ -1,8 +1,26 @@
 import React from "react";
 
+import { useStateValue } from "../StateProvider";
+import { EventRounded } from "@material-ui/icons";
+import axios from "axios";
 
 
-function Comments(){
+function Comments(props){
+    const [{user},dispatch]=useStateValue()
+
+    const submitComent= async (event)=>{
+
+        event.preventDefault()
+        //console.log(event.target.[0].value)
+
+        const dataComents ={
+            itinerario:props.itineraario,
+            mensage:EventRounded.target[0].value,
+            user:user.datosUser.id
+        }
+        console.log(dataComents)
+        
+    }
 
     return(
         /*Contenedor Principal*/

@@ -1,3 +1,4 @@
+import { InsertEmoticon } from "@material-ui/icons";
 import React from "react";
 
 import Cancun from "../imagenes/Cancun.jpg";
@@ -36,7 +37,7 @@ function Itinerary(props) {
               </div>
               <div className="cart-btn">
                 <a href="#" title="Add To Cart">
-                  Comments
+                  {/* <Comments itinerario={Itenerario._id}> */}
                 </a>
               </div>
               
