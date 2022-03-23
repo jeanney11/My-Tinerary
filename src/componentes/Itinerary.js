@@ -1,11 +1,22 @@
-import { InsertEmoticon } from "@material-ui/icons";
 import React from "react";
+import { useState, useEffect } from "react";
 
-import Cancun from "../imagenes/Cancun.jpg";
+//import { EventRounded } from "@material-ui/icons";
+import { InsertEmoticon } from "@material-ui/icons";
+import { Link as LinkRouter } from "react-router-dom";
+// import Comments from "./Comments";
+//import { Collapse } from "bootstrap";
+
+
 
 function Itinerary(props) {
   const itinerarios = props.itineraries
-  console.log(itinerarios)
+  //console.log(itinerarios)
+  const [comment, setComment] = useState()
+
+  
+
+
 
   return (
     <>
@@ -37,7 +48,22 @@ function Itinerary(props) {
               </div>
               <div className="cart-btn">
                 <a href="#" title="Add To Cart">
-                  {/* <Comments itinerario={Itenerario._id}> */}
+
+                {/* <div className="btn-group" role="group">
+      <button id="btnGroupDrop2" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     Comentarios
+      </button>
+    <div className="dropdown-menu" aria-labelledby="btnGroupDrop2"> */}
+      {/* <a class="dropdown-item" href="#">Dropdown link</a> */}
+      {/* <LinkRouter to="/comment"> */}
+       
+        {/* </LinkRouter> */}
+      {/* <a class="dropdown-item" href="#">Dropdown link</a> */}
+    {/* </div>
+  </div>
+
+             */}
+                  
                 </a>
               </div>
               
@@ -52,7 +78,8 @@ function Itinerary(props) {
               
             </li>
           </ul>
-          
+
+          {/* <Comments itinerario={itin._id}/>  */}
           
         </div>
          

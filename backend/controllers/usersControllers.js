@@ -54,8 +54,9 @@ const usersControllers = {
 
     nuevoUsuario: async (req,res)=> {
 
-        const {firstname, lastname, email, password, from}=req.body.NuevoUsuario
+        const {firstname, lastname, email, password, from}=req.body.NuevoUsuario;
         console.log(req.body)
+        
         try{
             const UsuarioExiste= await User.findOne({email})
 
@@ -75,20 +76,20 @@ const usersControllers = {
 
                 // } 
 
-                if (from !== "signup"){
+                if (from !== "signup") {
                     const passwordHash = bcryptjs.hashSync(password,10)
-                    UsuarioExiste.password = passwordHash
+                   UsuarioExiste.password = passwordHash
                    UsuarioExiste.emailVerificado = true
                    UsuarioExiste.from = from
                    UsuarioExiste.connected = false
                    UsuarioExiste.save()
-                   res.json({success:true, response:"Actualizar tu SignUp para que lo realices con " + from})
+
+                  return res.json({success:true, response:"Actualizar tu SignUp para que lo realices con " + from})
                 } else{
-                    res.json({ success:false, response:"El nombre de usuario ya esta en uso"})
+                  return res.json({ success:false, response:"El nombre de usuario ya esta en uso"})
                 }
             }
-
-
+            
             else{
                 const uniqueText=crypto.randomBytes(15).toString("hex")// genera un texto de 15 caracteres hexagesimal
                 const emailVerificado = false
@@ -146,18 +147,20 @@ const usersControllers = {
 
                     if (passwordCoincide) {
                         const token = jwt.sign({...usuario}, process.env.SECRETKEY)
+
                         const datosUser = {
                             firstname: usuario.firstname,
                             lastname: usuario.lastname,
                             email:usuario.email,
+                            id:usuario._id,
                         }
-                        usuario.connected=true
-                        await usuario.save()
-                        res.json({success:true,from:"controller",response:{token,datosUser}})
+                        usuario.connected=true;
+                        await usuario.save();
+                        res.json({success:true,from:"controller",response:{token,datosUser}, mensage:"Bienvenido"});
                     }
-                    else{res.json({success:false,from:"controller",error:"el usuario y/o contraseña estan incorrectos"})}
+                    else{res.json({success:false,from:"controller",mensage:"el usuario y/o contraseña estan incorrectos"})}
                 }
-                else {res.json({success:false,from:"controller",error:"verifica tu e-mail para validacion"})}
+                else {res.json({success:false,from:"controller",mensage:"verifica tu e-mail para validacion"})}
             }
         }
         catch(error){console.log(error);res.json({success:false,response:null,error:error})}
@@ -172,6 +175,19 @@ const usersControllers = {
          await user.save()
          res.json({success:true, response:"Sesion Cerrada"})
 
+     },
+
+     verificarToken: async(req, res)=>{
+         if(!req.error){
+             res.json({success:true, 
+                respuesta:
+                    {firstname: req.user.firstname,
+                    lastname: req.user.lastname,
+                    email:req.user.email,
+                    id:req.user.id},
+                    response:"Bienvenido nuevamente" + req.user.firstname
+               })
+         }
      }
 }
     module.exports = usersControllers

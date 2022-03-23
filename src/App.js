@@ -14,6 +14,8 @@ import Footer from "./componentes/Footer";
 import City  from "./componentes/City";
 import axios from "axios";
 
+
+
 function App() {
   const [{cities, itineraries}, dispatch]=useStateValue()
   
@@ -29,14 +31,33 @@ function App() {
       type:actionType.CITIESDB,
       cities:response.data.response.cities
     })
-    axios.get("http://localhost:4000/api/itinerary")
-    .then(response => {
-      dispatch({
-         type:actionType.ITINERARIESDB,
-         itineraries: response.data.response.itinerary
-       })
-       console.log(itineraries)
-     });
+    // axios.get("http://localhost:4000/api/itinerary")
+    // .then(response => {
+    //   dispatch({
+    //      type:actionType.ITINERARIESDB,
+    //      itineraries: response.data.response.itinerary
+    //    })
+    //    console.log(itineraries)
+    //  });
+
+     if(localStorage.getItem("token")!==null){
+      const token= localStorage.getItem("token")
+      const  user = axios.get("http://localhost:4000/api/signInToken",{
+        headers:{
+          "Authorization":"Bearer"+token
+        }
+      })
+      if(user.data.success){
+
+        dispatch({
+          type:actionType.USER,
+          user:user.data.response
+        })
+      } else{
+        localStorage.removeItem("token")
+      }
+
+     }
     
     
   })

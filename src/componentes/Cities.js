@@ -1,6 +1,7 @@
 import React from "react";
 
 
+
 import Carousel from "../componentes/Carousel";
 
 import CardsCity from "../componentes/CardsCity";
@@ -15,6 +16,10 @@ function Cities() {
 
   return (
     <div>
+
+
+
+
 
      
       <Search />

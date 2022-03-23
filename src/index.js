@@ -4,18 +4,20 @@ import { StateProvider } from './StateProvider';
 import reducer, {inicialState} from './reducer';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
    <StateProvider inicialState={inicialState} reducer ={reducer}> 
      <App />
-    </StateProvider>
-  </React.StrictMode>,
+    </StateProvider>,
+  
   document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
+// reportWebVitals();

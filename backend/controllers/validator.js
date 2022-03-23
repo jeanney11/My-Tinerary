@@ -3,6 +3,7 @@ const { nuevoUsuario } = require("./usersControllers")
 
 const validator = (req,res,next)=>{ 
     console.log(req.body.NuevoUsuario) 
+    
 const Schema=joi.object({
     firstname:joi.string().max(40).min(3).trim().pattern(new RegExp("[a-zA-Z]")).required().messages({
 

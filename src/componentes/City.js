@@ -6,9 +6,9 @@ import HeadCity from "./HeadCity";
 import InfoCity from "./InfoCity";
 import TitleCity from "./TitleCity";
 import { useParams } from "react-router-dom";
-import { AddBoxOutlined } from "@material-ui/icons";
+//import { AddBoxOutlined } from "@material-ui/icons";
 import axios from "axios";
-import Comments from "./Comments";
+// import Comments from "./Comments";
 
 
 
@@ -39,7 +39,7 @@ citySelecter.map(city=>
         <InfoCity citySelecter={citySelecter}/>
         <TitleCity/>
         <Itinerary itineraries={itineraries}/>   
-        <Comments/> 
+        {/* <Comments/>  */}
         
         {/* itinerarySelecter={itinerarySelecter} */}
         

@@ -1177,24 +1177,24 @@ margin-bottom: 60px;
   box-sizing: border-box;
 }*/
 
-.comments-container a {
+/* .comments-container a {
   color: #03658c;
   text-decoration: none;
-}
+} */
 
-#comments-list ul {
+/* #comments-list ul {
  list-style-type: none;
-}
+} */
 
-.bodyComments {
+/* .bodyComments {
  font-family: 'Roboto', Arial, Helvetica, Sans-serif, Verdana;
  background: transparent;
-}
+} */
 
 /** ====================
 * Lista de Comentarios
 =======================*/
-.comments-container {
+/* .comments-container {
  margin: 60px auto 15px;
  width: 768px;
 }
@@ -1208,9 +1208,9 @@ margin-bottom: 60px;
 .comments-container h1 a {
  font-size: 18px;
  font-weight: 700;
-}
+} */
 
-.comments-list {
+/* .comments-list {
  margin-top: 30px;
  position: relative;
 }
@@ -1218,7 +1218,7 @@ margin-bottom: 60px;
 /**
 * Lineas / Detalles
 -----------------------*/
-.comments-list:before {
+/* .comments-list:before {
  content: '';
  width: 2px;
  height: 100%;
@@ -1226,9 +1226,9 @@ margin-bottom: 60px;
  position: absolute;
  left: 32px;
  top: 0;
-}
+} */ 
 
-.comments-list:after {
+/* .comments-list:after {
  content: '';
  position: absolute;
  background: #c7cacb;
@@ -1240,9 +1240,9 @@ margin-bottom: 60px;
  -webkit-border-radius: 50%;
  -moz-border-radius: 50%;
  border-radius: 50%;
-}
+} */
 
-.reply-list:before, .reply-list:after {display: none;}
+/* .reply-list:before, .reply-list:after {display: none;}
 .reply-list li:before {
  content: '';
  width: 60px;
@@ -1272,11 +1272,11 @@ margin-bottom: 60px;
  padding-left: 88px;
  clear: both;
  margin-top: 15px;
-}
+} */
 /**
 * Avatar
 ---------------------------*/
-.comments-list .comment-avatar {
+/* .comments-list .comment-avatar {
  width: 65px;
  height: 65px;
  position: relative;
@@ -1290,9 +1290,9 @@ margin-bottom: 60px;
  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
  overflow: hidden;
-}
+} */
 
-.comments-list .comment-avatar img {
+/* .comments-list .comment-avatar img {
  width: 100%;
  height: 100%;
 }
@@ -1308,11 +1308,11 @@ margin-bottom: 60px;
  height: 0;
  display: block;
  clear: both;
-}
+} */
 /**
 * Caja del Comentario
 ---------------------------*/
-.comments-list .comment-box {
+/* .comments-list .comment-box {
  width: 680px;
  float: right;
  position: relative;
@@ -1412,6 +1412,22 @@ margin-bottom: 60px;
  -moz-border-radius: 3px;
  border-radius: 3px;
 }
+
+.comment-content .city-textarea{
+  width: 600px;
+  justify-content: center;
+  background: rgb(243, 217, 231);
+  padding: 12px;
+  font-size: 15px;
+  color: #292323;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  
+  
+} */
+
+
 
 /** =====================
 * Responsive

@@ -11,7 +11,7 @@ const responseFacebook = async(response) => {
 
   const userData = {
     email: response.email,
-    password: response.id + "aB",
+    password: response.id + "Ab",
     from:"Facebook",
   };
 
@@ -33,10 +33,12 @@ const responseFacebook = async(response) => {
 }
 
 function displayMessages(data) {
+  console.log(data)
   if (!data.success) {
-    console.log(data.error)
+    console.log(data.mensage)
    } else {
     console.log(data.response)
+    console.log(data.mensage)
    }
   
    

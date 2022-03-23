@@ -50,8 +50,8 @@ function NavBar() {
           </LinkRouter>
         </form>
       </div>
-      <div className="col-2"> <a className="d-grid gap-2 d-md-flex justify-content-md" href="#">
-          <div className="btn-group" role="group">
+      <div className="col-2"> <a className="d-grid gap-2 d-md-flex justify-content-md" > 
+          <div className="dropdown">
             <button id="btnGroupDrop1" type="button"className="btn btn-transparent dropdown"data-bs-toggle="dropdown" aria-expanded="false">
               <MaterialIcon icon="person_pin" color="#004e92" size="large" />
             </button>
@@ -59,28 +59,31 @@ function NavBar() {
             <ul className="dropdown-menu" aria-labelledby="btnGroupDrop1">
               
               <li>
-              <LinkRouter to="/signUp"><a className="dropdown-item" href="#">
+              <LinkRouter to="/signUp"><a className="dropdown-item" >
                   SignUp
                 </a> </LinkRouter>
               </li>
               <li>
-              <LinkRouter to="/SignIn"><a className="dropdown-item" href="#">
+              <LinkRouter to="/SignIn"><a className="dropdown-item">
                   SignIn
                 </a> </LinkRouter>
-              </li>
-              <li>
-               
-              <button onClick={SignOut}>
-                <a className="dropdown-item" href="#">
+              </li> 
+              
+              <li>               
+              <a onClick={SignOut}  className="dropdown-item">
                   SignOut
-                </a> </button>
+              </a> 
               </li>
 
             </ul>
           </div>
-        </a>
-      </div>
+         </a>
+      </div> 
+
+
+
     </nav>
+
   );
 }
 

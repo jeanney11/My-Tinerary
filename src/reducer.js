@@ -36,14 +36,20 @@ const reducer=(state, action)=>{
         }
 
         case "FILTER": 
-        const filterCity=state.cities.filter(city=>city.name.toLowerCase().startsWith(action.value.toLowerCase().trim()))
+        const filterCity=[]
+                if (action.value.filterBy ==="Cities"){
+                   filterCity.push(...state.cities.filter(city=>city.name.toLowerCase().startsWith(action.value.value.toLowerCase().trim())))
+                }else{
+                    filterCity.push(...state.cities.filter(city=>city.continents.toLowerCase().startsWith(action.value.value.toLowerCase().trim())))  
+                }
+        
         return{
             ...state,
             filterCity:filterCity
         }
 
 
-        default:return state
+        default:return state;
     }
         
     }
