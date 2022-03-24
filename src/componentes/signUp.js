@@ -12,11 +12,11 @@ import Box from "@material-ui/core/Box";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import GoogleLogin from "react-google-login";
+//import GoogleLogin from "react-google-login";
 import { Link as Linkrouter } from "react-router-dom";
 import axios from "axios";
 import Faceb from "./SignUpBoton/Faceb";
-import Google from "./SignUpBoton/Google";
+//import Google from "./SignUpBoton/Google";
 
 function Copyright() {
   return (
@@ -103,13 +103,16 @@ export default function SignUp() {
         displayMessages(response.data)
     );
     function displayMessages(data) {
-      if (data.success === "falseVAL") {
+      // if (data.success === "falseVAL") {
+      //   console.log(data);
+      //   console.log(data.response.error.details);
+      //   alert(data.response.error.details.map((error) => error.message));
+      // } 
+       if (data.success === true) {
+        alert (data.response)
         console.log(data);
-        console.log(data.response.error.details);
-        alert(data.response.error.details.map((error) => error.message));
-      } else if (data.success === true) {
-        console.log(data);
-      } else if (data.suceess === false) {
+      } else  {
+        alert(data.response)
         console.log(data);
       }
     }

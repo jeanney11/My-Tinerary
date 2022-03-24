@@ -91,7 +91,8 @@ export default function SignIn() {
         //  console.log(response.data)
         // }
 
-        displayMessages(response.data),
+        displayMessages(response.data)
+        
 
         
         
@@ -100,9 +101,12 @@ export default function SignIn() {
 
   function displayMessages(data) {
     if (!data.success) {
-      console.log(data.error)
+      alert(data.response)
+      console.log(data)
      } else {
-      console.log(data.response)
+       localStorage.setItem("token",data.data.token)
+       alert(data.response)
+      console.log(data)
      }
     
  

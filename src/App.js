@@ -42,20 +42,23 @@ function App() {
 
      if(localStorage.getItem("token")!==null){
       const token= localStorage.getItem("token")
-      const  user = axios.get("http://localhost:4000/api/signInToken",{
+       axios.get("http://localhost:4000/api/signInToken",{
         headers:{
-          "Authorization":"Bearer"+token
+          'Authorization':'Bearer ' + token
         }
       })
+      console.log(token)
+      .then(user => {
       if(user.data.success){
 
         dispatch({
           type:actionType.USER,
-          user:user.data.response
+          user:user.data.respuesta
         })
       } else{
         localStorage.removeItem("token")
       }
+    })
 
      }
     

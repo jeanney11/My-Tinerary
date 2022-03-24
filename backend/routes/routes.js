@@ -1,13 +1,14 @@
 const Router = require("express").Router();
-// const passport=require ("../config/passport")
+const passport=require ("../config/passport")
 const datosController = require("../controllers/datosControlles");
 const{ObtenerTodosLosDatos,ObtenerItinerarios}= datosController   // destructuracion del controlador   
 const usersControllers = require ("../controllers/usersControllers")
-const {nuevoUsuario, verifyEmail, accesoUsuario,cerrarSesion} = usersControllers
-const validator = require ("../controllers/validator");
-const commentControllers = require("../controllers/comentariosControllers");
-const {cargarComentarios,obtenerComentarios,borrarComentario,modificarComentario,verificarToken} = commentControllers
+const {nuevoUsuario, verifyEmail, accesoUsuario,cerrarSesion,verificarToken} = usersControllers
 
+const commentControllers = require("../controllers/comentariosControllers");
+const {cargarComentarios,obtenerComentarios,borrarComentario,modificarComentario} = commentControllers
+
+const validator = require ("../controllers/validator");
 
 Router.route("/datos") // parte de la url de consulta
 .get(ObtenerTodosLosDatos)
@@ -28,7 +29,7 @@ Router.route("/signIn")
 Router.route("/SignOut")
 .post(cerrarSesion)
 
-Router.route("/comment")
+Router.route("/comments")
 .post(cargarComentarios)
 
 Router.route("/comments/:id")
@@ -36,7 +37,7 @@ Router.route("/comments/:id")
 .delete(borrarComentario)
 .put(modificarComentario)
 
-// Router.route("/signInToken")
-// .get(passport.authenticate("jwt", {session:false}), verificarToken)
+Router.route("/signInToken")
+.get(passport.authenticate("jwt", {session:false}), verificarToken)
 
 module.exports = Router

@@ -89,6 +89,8 @@ const modificar =(id)=>{
                     <i className="fa fa-reply"></i>
                     <i className="fa fa-heart"></i>
                   </div>
+                {/* aqui puedo meter el ternario para el ternario que autoriza los botones al usuario por comentario */}
+
                   <div className="comment-content">
                     <input onKeyUp={handleChange}defaultValue={itin.comment}></input>
                   </div>
@@ -96,6 +98,7 @@ const modificar =(id)=>{
                                
                 </div>
                 <button className="btn btn primary" onClick={()=>borrarComentario(itin._id)}>Borrar</button>
+
                <button className="btn btn primary"  onClick={()=>modificar(itin._id)} >Modificar</button> 
 
            </div>  

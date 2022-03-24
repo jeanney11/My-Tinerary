@@ -1,12 +1,15 @@
 import React from 'react';
 import axios from 'axios';
 import FacebookLogin from 'react-facebook-login';
+import { actionType } from "../../reducer";
+import { useStateValue } from "../../StateProvider";
  
 
 function FacebIn(){
-
+  const [{ user }, dispatch] = useStateValue();
 const responseFacebook = async(response) => {
   console.log(response);
+  
 
 
   const userData = {
@@ -35,11 +38,19 @@ const responseFacebook = async(response) => {
 function displayMessages(data) {
   console.log(data)
   if (!data.success) {
-    console.log(data.mensage)
-   } else {
+    alert(data.response)
     console.log(data.response)
-    console.log(data.mensage)
+   } else {
+     alert(data.response)
+     localStorage.setItem("token",data.data.token)
+    console.log(data.response)
+    
    }
+
+   dispatch({
+    type: actionType.USERDB,
+    user: data.response,
+  });
   
    
 

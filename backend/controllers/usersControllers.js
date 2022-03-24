@@ -139,14 +139,14 @@ const usersControllers = {
             const usuario= await User.findOne({email})
 
             if(!usuario){
-                res.json({success:false,from:"controller",error:"el usuario y/o contraseña es incorrecta"})
+                res.json({success:false,from:"controller",response:"el usuario y/o contraseña es incorrecta"})
             }
             else{
                 if(usuario.emailVerificado){
                     let passwordCoincide = bcryptjs.compareSync(password,usuario.password)
 
                     if (passwordCoincide) {
-                        const token = jwt.sign({...usuario}, process.env.SECRETKEY)
+                       
 
                         const datosUser = {
                             firstname: usuario.firstname,
@@ -156,11 +156,12 @@ const usersControllers = {
                         }
                         usuario.connected=true;
                         await usuario.save();
-                        res.json({success:true,from:"controller",response:{token,datosUser}, mensage:"Bienvenido"});
+                        const token = jwt.sign({...datosUser}, process.env.SECRETKEY,{expiresIn:60*60*24})
+                        res.json({success:true,from:"controller",data:{token,datosUser}, response:"Bienvenido"});
                     }
-                    else{res.json({success:false,from:"controller",mensage:"el usuario y/o contraseña estan incorrectos"})}
+                    else{res.json({success:false,from:"controller",response:"el usuario y/o contraseña estan incorrectos"})}
                 }
-                else {res.json({success:false,from:"controller",mensage:"verifica tu e-mail para validacion"})}
+                else {res.json({success:false,from:"controller",response:"verifica tu e-mail para validacion"})}
             }
         }
         catch(error){console.log(error);res.json({success:false,response:null,error:error})}
@@ -180,15 +181,18 @@ const usersControllers = {
      verificarToken: async(req, res)=>{
          if(!req.error){
              res.json({success:true, 
-                respuesta:
+                    data:
                     {firstname: req.user.firstname,
                     lastname: req.user.lastname,
                     email:req.user.email,
                     id:req.user.id},
                     response:"Bienvenido nuevamente" + req.user.firstname
                })
-         }
+          } else{
+              res.json({success:false,response:"por favor realizar nuevamente sign in"})
+          }
      }
-}
-    module.exports = usersControllers
+    
+};
+    module.exports = usersControllers;
 

@@ -15,10 +15,14 @@ function NavBar() {
   
 
   async function SignOut(){
-    const email=user.datosUser.email
-    await axios.post("http://localhost:4000/api/SignOut",{email})
-    .then(response =>
-      console.log(response))
+    // const email=user.datosUser.email
+    console.log(user)
+    console.log("function")
+    localStorage.removeItem("token")
+    // await axios.post("http://localhost:4000/api/SignOut",{email})
+    // .then(response =>
+    //   console.log(response))
+      
       dispatch({
         type:actionType.USERDB,
         user: null
@@ -52,6 +56,7 @@ function NavBar() {
       </div>
       <div className="col-2"> <a className="d-grid gap-2 d-md-flex justify-content-md" > 
           <div className="dropdown">
+
             <button id="btnGroupDrop1" type="button"className="btn btn-transparent dropdown"data-bs-toggle="dropdown" aria-expanded="false">
               <MaterialIcon icon="person_pin" color="#004e92" size="large" />
             </button>
@@ -64,16 +69,19 @@ function NavBar() {
                 </a> </LinkRouter>
               </li>
               <li>
+              {!user?
               <LinkRouter to="/SignIn"><a className="dropdown-item">
                   SignIn
                 </a> </LinkRouter>
+                :<a onClick={()=>SignOut()} className="dropdown-item"> SignOut</a>}             
               </li> 
+                
               
-              <li>               
+              {/* <li>               
               <a onClick={SignOut}  className="dropdown-item">
                   SignOut
               </a> 
-              </li>
+              </li> */}
 
             </ul>
           </div>
