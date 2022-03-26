@@ -60,6 +60,7 @@ const usersControllers = {
         try{
             const UsuarioExiste= await User.findOne({email})
 
+
             if (UsuarioExiste){
                 //res.json({success:false, response:"Usuario ya existe, realice el SignIn"})
 
@@ -158,13 +159,16 @@ const usersControllers = {
                         await usuario.save();
                         const token = jwt.sign({...datosUser}, process.env.SECRETKEY,{expiresIn:60*60*24})
                         res.json({success:true,from:"controller",data:{token,datosUser}, response:"Bienvenido"});
-                    }
+                        console.log(datosUser)
+                    } 
+                    
                     else{res.json({success:false,from:"controller",response:"el usuario y/o contraseña estan incorrectos"})}
                 }
                 else {res.json({success:false,from:"controller",response:"verifica tu e-mail para validacion"})}
             }
         }
         catch(error){console.log(error);res.json({success:false,response:null,error:error})}
+        
      },
 
      cerrarSesion: async(req,res) => {

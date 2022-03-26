@@ -4,8 +4,11 @@ import { useState, useEffect } from "react";
 //import { EventRounded } from "@material-ui/icons";
 import { InsertEmoticon } from "@material-ui/icons";
 import { Link as LinkRouter } from "react-router-dom";
-// import Comments from "./Comments";
+//import Comments from "./Comments";
 //import { Collapse } from "bootstrap";
+import Slide from "../componentes/Slide";
+import MaterialIcon, { colorPalette } from "material-icons-react";
+
 
 
 
@@ -46,25 +49,10 @@ function Itinerary(props) {
                  {itin.price} 
                 </a>
               </div>
-              <div className="cart-btn">
-                <a href="#" title="Add To Cart">
-
-                {/* <div className="btn-group" role="group">
-      <button id="btnGroupDrop2" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-     Comentarios
-      </button>
-    <div className="dropdown-menu" aria-labelledby="btnGroupDrop2"> */}
-      {/* <a class="dropdown-item" href="#">Dropdown link</a> */}
-      {/* <LinkRouter to="/comment"> */}
-       
-        {/* </LinkRouter> */}
-      {/* <a class="dropdown-item" href="#">Dropdown link</a> */}
-    {/* </div>
-  </div>
-
-             */}
-                  
-                </a>
+              
+          <div className="btn brn primary"><MaterialIcon icon="favorite" color="#004e92" size="medium"/>
+                
+                
               </div>
               
             </li>
@@ -77,10 +65,13 @@ function Itinerary(props) {
               <span>{itin.time}</span>
               
             </li>
+            
+
+            <Slide itinerario={itin._id}/>
           </ul>
 
-          {/* <Comments itinerario={itin._id}/>  */}
-          
+            {/* <Slide itinerario={itin._id}/>   */}
+           
         </div>
          
       </div>

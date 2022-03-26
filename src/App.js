@@ -47,7 +47,7 @@ function App() {
           'Authorization':'Bearer ' + token
         }
       })
-      console.log(token)
+      //console.log(token)
       .then(user => {
       if(user.data.success){
 

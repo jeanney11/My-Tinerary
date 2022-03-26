@@ -17,7 +17,7 @@ function NavBar() {
   async function SignOut(){
     // const email=user.datosUser.email
     console.log(user)
-    console.log("function")
+    //console.log("function")
     localStorage.removeItem("token")
     // await axios.post("http://localhost:4000/api/SignOut",{email})
     // .then(response =>

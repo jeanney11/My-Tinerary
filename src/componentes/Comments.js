@@ -111,8 +111,8 @@ const modificar =(id)=>{
                       <textarea name="textarea" placeholder="write us....." className="city-textarea"></textarea>
                       <div className="btn-comentario-form">
                         <button type="submit" className="btn btn-primary"> 
-                        {" "}Send <i className="fa fa-paper-plane"></i>{" "}
-                        </button>{" "}
+                        Send <i className="fa fa-paper-plane"></i>
+                        </button>
 
                         <button className="btn brn primary">Borrar</button>
                         <button className="btn brn primary">Modificar</button>
