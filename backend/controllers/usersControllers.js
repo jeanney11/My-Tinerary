@@ -183,6 +183,7 @@ const usersControllers = {
      },
 
      verificarToken: async(req, res)=>{
+         //console.log(req)
          if(!req.error){
              res.json({success:true, 
                     data:

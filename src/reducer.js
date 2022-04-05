@@ -29,7 +29,8 @@ const reducer=(state, action)=>{
             itineraries:action.itineraries
         }
 
-        case "USERDB": 
+        case "USERDB":
+            console.log(action.user) 
         return{
             ...state,
             user:action.user

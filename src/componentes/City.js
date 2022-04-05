@@ -18,20 +18,20 @@ function City(){
 
     const[itineraries,setItineraries] = useState([])
 
-const [{cities}, dispatch]=useStateValue()
+    const [{cities}, dispatch]=useStateValue()
 
-const {id}=useParams()
+    const {id}=useParams()
 
-const citySelecter = cities.filter(city=>city._id === id)
+    const citySelecter = cities.filter(city=>city._id === id)
 //const itinerarySelecter= itineraries.filter(itin =>itin.city=== citySelecter[0].name)
-//console.log(citySelecter)
+console.log(citySelecter)
 
-useEffect(() => {
-citySelecter.map(city=>
+// useEffect(() => {
+// citySelecter.map(city=>
    
-        axios.get(`http://localhost:4000/api/itinerary/${city.name}`)
-        .then(response => setItineraries(response.data.response.itinerary)
-    ))},[])
+//         axios.get(`http://localhost:4000/api/itinerary/${city.name}`)
+//         .then(response => setItineraries(response.data.response.itinerary)
+//     ))},[])
     return(
 
         <div>

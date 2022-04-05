@@ -41,6 +41,7 @@
   top: 110px;
   right: 110px;
   text-shadow: 0 0 7px rgb(252, 236, 236);
+  
 }
 
   @media screen and (max-width: 860px){
@@ -73,15 +74,19 @@
   
 }
 .Descripcion{
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 40px;
+  /* margin-bottom: 20px; */
   padding: 20px;
-  font-family: 'Mochiy Pop P One', sans-serif;
+  font-family:'Qwitcher Grypen', cursive;
+  font-style: bold;
 }
 .Descripcion h2{
-  color: white;
+  color: rgb(219, 8, 184); 
+  text-shadow: 0 0 15px rgb(123, 212, 253);
+  font-size: 80px;
   text-align: center;
-  font-size: 30px;
+
+  
   
 }
 .Descripcion p{
@@ -219,6 +224,8 @@
 /*---------Footer------*/
 .page-footer{
   background-image: linear-gradient(rgb(123, 212, 253),rgb(162, 72, 235),rgb(252, 102, 187));
+  padding-top: 60px;
+ 
   
 }
 
@@ -239,6 +246,7 @@
 }
 
 .white-text{
+  
   margin: 10px;
   font-size: 20px;  
 }
@@ -775,7 +783,7 @@ margin-bottom: 60px;
   height: 390px;
   border: 1px solid #242323;
   border-radius: 10px;
-  background-color: whitesmoke;
+  background-color: white;
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
   -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
   -o-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
@@ -914,6 +922,17 @@ margin-bottom: 60px;
 }
 
 
+/* comentario del Itinerary*/
+
+.SlideComentario{
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+
+
+
+
+
 /* Encabezado de la página City*/
 
 
@@ -965,14 +984,16 @@ margin-bottom: 60px;
 				}
 		
 .profile-info h2 {
-	color: #E8E8E8;
+  font-family: 'Qwitcher Grypen', cursive;
+  font-size: 50px;
+	color: #f8e3ea;
     letter-spacing: 4px;
 	  padding-bottom: 12px;
 				}
 				
 .profile-info span {
 	display: block;
-    font-size: 12px;
+    font-size: 35px;
     color: #4CB493;
 	letter-spacing: 2px;
 			}

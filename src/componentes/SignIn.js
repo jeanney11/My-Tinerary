@@ -109,10 +109,9 @@ export default function SignIn() {
       console.log(data)
      }
     
- 
   dispatch({
     type: actionType.USERDB,
-    user: data.response,
+    user: data.data.datosUser,
   });
 }
 
@@ -164,6 +163,7 @@ export default function SignIn() {
             >
               Sign In
             </Button>
+
           <FacebIn/>
 
             <Grid container>

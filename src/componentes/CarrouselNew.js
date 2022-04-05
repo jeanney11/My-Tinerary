@@ -41,7 +41,7 @@ function App() {
   ];
 
   const captionStyle = {
-    fontSize: '2em',
+    fontSize: '8em',
     fontWeight: 'bold',
   }
   const slideNumberStyle = {
@@ -50,9 +50,9 @@ function App() {
   }
   return (
     <div className="App">
-      <div style={{ textAlign: "center", fontFamily: "'Mochiy Pop P One', sans-serif", color:"white", marginTop:"30px"}}>
-        <h2>Wonders of the World</h2>
-        <p>Dream places that everyone would like to know</p>
+      <div style={{ textAlign: "center", fontFamily: "'Qwitcher Grypen', cursive", color:"white", marginTop:"20px"}}>
+        <h2 style={{ textAlign: "center", fontFamily: "'Qwitcher Grypen', cursive", color:"fuchsia", fontSize:"80px", marginTop:"20px"}}>Wonders of the World</h2>
+        <p style={{ textAlign: "center", fontFamily: "'Sedgwick Ave', cursive", color:"blue", fontSize:"30px"}}>Dream places that everyone would like to know</p>
         <div style={{
           padding: "0 20px"
         }}>

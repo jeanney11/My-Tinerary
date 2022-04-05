@@ -34,12 +34,12 @@ function Cities() {
         <div
           style={{
             textAlign: "center",
-            fontFamily: "'Mochiy Pop P One', sans-serif",
+            fontFamily: "'Qwitcher Grypen', cursive",
             color: "white",
             marginTop: "60px",
           }}
         >
-          <h2>Take Advantage of our Promotions</h2>
+          <h2 style={{ textAlign: "center", fontFamily: "'Qwitcher Grypen', cursive", color:"fuchsia", fontSize:"80px"}}>Take Advantage of our Promotions</h2>
         </div>
       </div>
 

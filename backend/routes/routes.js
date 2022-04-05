@@ -1,14 +1,17 @@
 const Router = require("express").Router();
-const passport=require ("../config/passport")
 const datosController = require("../controllers/datosControlles");
-const{ObtenerTodosLosDatos,ObtenerItinerarios}= datosController   // destructuracion del controlador   
+const{ObtenerTodosLosDatos,ObtenerItinerarios,ObtenerUnItinerario,likeDislike}= datosController   // destructuracion del controlador   
+
 const usersControllers = require ("../controllers/usersControllers")
 const {nuevoUsuario, verifyEmail, accesoUsuario,cerrarSesion,verificarToken} = usersControllers
 
 const commentControllers = require("../controllers/comentariosControllers");
-const {cargarComentarios,obtenerComentarios,borrarComentario,modificarComentario} = commentControllers
+const {cargarComentarios,borrarComentario,modificarComentario} = commentControllers
 
+const passport=require("passport")
+require ("../config/passport")
 const validator = require ("../controllers/validator");
+const { get } = require("mongoose");
 
 Router.route("/datos") // parte de la url de consulta
 .get(ObtenerTodosLosDatos)
@@ -16,6 +19,8 @@ Router.route("/datos") // parte de la url de consulta
 Router.route("/itinerary/:city")
 .get(ObtenerItinerarios)
 
+Router.route("/itinerario/:id")
+.get(ObtenerUnItinerario)
 
 Router.route("/signup")
 .post(validator,nuevoUsuario)
@@ -30,14 +35,18 @@ Router.route("/SignOut")
 .post(cerrarSesion)
 
 Router.route("/comments")
-.post(cargarComentarios)
+.post(passport.authenticate("jwt", {session:false}),cargarComentarios)
 
-Router.route("/comments/:id")
-.get(obtenerComentarios)
-.delete(borrarComentario)
-.put(modificarComentario)
+Router.route("/deletecomments/:id")
+.post(passport.authenticate("jwt", {session:false}),borrarComentario)
+// .get(obtenerComentarios)
+//.put(modificarComentario)
 
 Router.route("/signInToken")
 .get(passport.authenticate("jwt", {session:false}), verificarToken)
+
+
+Router.route("/likesDislike")
+.post(passport.authenticate("jwt", {session:false}),likeDislike)
 
 module.exports = Router

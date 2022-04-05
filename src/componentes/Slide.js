@@ -11,6 +11,8 @@ import TextareaAutosize from '@mui/base/TextareaAutosize';
 import MaterialIcon, { colorPalette } from "material-icons-react";
 import { FarBee } from "react-icons/fa";
 import Avatar1 from "../imagenes/FotoFiltro/Avatar1.jpg"
+import { AddComment } from "@material-ui/icons";
+
 
 
 
@@ -19,7 +21,7 @@ import Avatar1 from "../imagenes/FotoFiltro/Avatar1.jpg"
 
 function Slide(props) {
 
-  const [comment, setComment] = useState()
+  const [comment, setComment] = useState([])
 
   const [{ user }, dispatch] = useStateValue();
 
@@ -27,21 +29,28 @@ function Slide(props) {
 
   const [cambio, setCambio] = useState()
 
-  const submitComent = async (event) => {
-    event.preventDefault()
+  const [newComment, setNewComment]= useState()
+
+  
+  
+  const submitComent = async () => {
+    
     //console.log(event.target[0].value)
 
+    const token= localStorage.getItem("token")
     const dataComents = {
       itinerario: props.itinerario,
-      mensage: event.target[0].value,
-      user: user.data.datosUser.id
+      mensage: newComment,
+      // user: user.dataUser.id
     };
    
-    console.log(dataComents)
-
-    await axios.post("http://localhost:4000/api/comments",{ dataComents })
+    await axios.post("http://localhost:4000/api/comments",{ dataComents },{
+      headers:{
+        'Authorization':'Bearer ' + token
+      }
+    })
       .then((response) => 
-     setComment(response.data.response.comentario))
+     setComment(response.data.response.newComentario))
      setReload(!reload)
     
     }
@@ -49,28 +58,38 @@ function Slide(props) {
     useEffect(() => {
         let id= props.itinerario
         
-        axios.get(`http://localhost:4000/api/comments/${id}`)
-      .then(response =>{   
-     setComment(response.data.response.comentario)
+        console.log(id)
         
+        axios.get(`http://localhost:4000/api/itinerario/${id}`)
+      .then(response =>{   
+    setComment(response.data.response.itinerario.comments)
+        
+      console.log(comment)  
     })
-    //console.log(comment)
-    
+   
+    console.log(user)
+console.log("prueba")
     },[reload])
 
-const borrarComentario=(id)=>{
-  axios.delete(`http://localhost:4000/api/comments/${id}`)
+const borrarComentario=(event)=>{
+  const token= localStorage.getItem("token")
+  const id= event.target.id
+  console.log(event.target)
+  axios.post(`http://localhost:4000/api/deletecomments/${id}`,{},{
+    headers:{
+      'Authorization':'Bearer ' + token
+    }
+  })
       setReload(!reload)
 }
 
-const handleChange=(event)=>{
-  setCambio(event.target.value)
-}
 
 
-const modificar =(id)=>{
+
+const modificarComentario =(event)=>{
+  const id=event.target.id
       
-      console.log(id,cambio)
+      // console.log(id,cambio)
   let data= cambio
   axios.put(`http://localhost:4000/api/comments/${id}`, {data})
   .then(response =>console.log(response))
@@ -82,46 +101,54 @@ const modificar =(id)=>{
 
 
   return (
-    <div>
+    <div className="SlideComentario">
       <Accordion>
         <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
           <h3>Comments</h3>
-
-         
-
-          {/* {comment?.map(itin =>  
-              <div className="comment-main-level"> 
-                {/* Avatar */}
-                {/* <div className="comment-avatar"> 
-                <img src={Avatar1}/>
-                </div> */}
-                    {/*Contenedor del Comentario*/}
-                {/* <div className="comment-box">
-                  <div className="comment-head">
-                    <h6 className="comment-name by-author"><p>{itin.user.firstname}</p></h6> 
-                    <span>hace 20 minutos</span> 
-                    <i className="fa fa-reply"></i>
-                    <i className="fa fa-heart"></i>
-                  </div> */}
-                {/* aqui puedo meter el ternario para el ternario que autoriza los botones al usuario por comentario */}
-
-                  {/* <div className="comment-content">
-                    <input onKeyUp={handleChange}defaultValue={itin.comment}></input>
-                  </div> */}
-
-                               
-                {/* </div>
-                <button className="btn btn primary" onClick={()=>borrarComentario(itin._id)}>Borrar</button>
-
-               <button className="btn btn primary"  onClick={()=>modificar(itin._id)} >Modificar</button> 
-
-           </div>  
-
-
-                )}  */}
-
         </AccordionSummary>
+
+       
         <AccordionDetails>
+          
+         {comment.length>0 && comment?.map(item=>
+         <>
+         {item.userId._id === user?.id?
+         <div>
+           <div type="text" onInput={(event)=>setCambio(event.currentTarget.textContent)} contentEditable>
+            {item.comment}
+           </div>
+           <button className="btn brn primary" id={item._id}onClick={borrarComentario}><MaterialIcon icon="delete" color="#004e92" size="medium"  id={item._id}/></button>
+           <button className="btn brn primary" id={item._id} onClick={modificarComentario}> <MaterialIcon icon="mode" color="#004e92" size="medium"  id={item._id}/></button>
+         </div>:
+         <div>{item.comment}</div>
+         }
+         </>
+         )}
+          {user &&
+          <div>
+            <textarea name="textarea" onChange={(event)=>setNewComment(event.target.value)} placeholder="write us....." className="city-textarea" style={{ width: 600 }} ></textarea>
+               
+                <button type="button" onClick={submitComent} className="btn brn-primary"> 
+                <MaterialIcon icon="send" color="#004e92" size="medium" /> </button>
+          </div>
+          
+          }
+
+    
+        {/* {comment?.map(itin=>    
+        <div className="acordion-box">
+                 <div className="comentario-user-imag">
+                   <img src={Avatar1} alt=" " width="60" height="60"></img> */}
+                   {/* <p>{itin.user.firstname}</p> */}
+                 {/* </div>
+                 <div className="comentario-user-tex">
+                   <p>{itin.comment}</p>
+                 </div>
+
+        </div>
+
+          )}             
+
         <div className="comment-content mb-3">
                     <form onSubmit={submitComent}>
                       <textarea name="textarea" placeholder="write us....." className="city-textarea" style={{ width: 600 }} ></textarea>
@@ -136,64 +163,13 @@ const modificar =(id)=>{
                     </form>
 
                     
-                  </div>  
+                  </div>   */}
         </AccordionDetails>
+        
       </Accordion>
     </div>
 
-    // <div id="carousel" className="carousel slide" data-bs-ride="carousel">
-    //   <div className="carousel-indicators">
-    //     <button
-    //       type="button"
-    //       data-bs-target="#carouselExampleIndicators"
-    //       data-bs-slide-to="0"
-    //       className="active"
-    //       aria-current="true"
-    //       aria-label="Slide 1"
-    //     ></button>
-    //     <button
-    //       type="button"
-    //       data-bs-target="#carouselExampleIndicators"
-    //       data-bs-slide-to="1"
-    //       aria-label="Slide 2"
-    //     ></button>
-    //     <button
-    //       type="button"
-    //       data-bs-target="#carouselExampleIndicators"
-    //       data-bs-slide-to="2"
-    //       aria-label="Slide 3"
-    //     ></button>
-    //   </div>
-    //   <div className="carousel-inner">
-    //     <div className="carousel-item active ">
-    //       <img src={BoraBora} className="d-block m-auto center" alt="..." />
-    //     </div>
-    //     <div className="carousel-item">
-    //       <img src={Escocia} className="d-block m-auto center" alt="..." />
-    //     </div>
-    //     <div className="carousel-item">
-    //       <img src={Noruega} className="d-block m-auto center" alt="..." />
-    //     </div>
-    //   </div>
-    //   <button
-    //     className="carousel-control-prev"
-    //     type="button"
-    //     data-bs-target="#carouselExampleIndicators"
-    //     data-bs-slide="prev"
-    //   >
-    //     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    //     <span className="visually-hidden">Previous</span>
-    //   </button>
-    //   <button
-    //     className="carousel-control-next"
-    //     type="button"
-    //     data-bs-target="#carouselExampleIndicators"
-    //     data-bs-slide="next"
-    //   >
-    //     <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    //     <span className="visually-hidden">Next</span>
-    //   </button>
-    // </div>
+  
   );
 }
 export default Slide;

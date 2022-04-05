@@ -22,7 +22,7 @@ function Home() {
         <div><h2 className="textos"> "to Travel is to Live"</h2></div>
         </div>
       <div className="Descripcion">
-          <h2>TOP CITIES</h2>
+          <h2>Top Cities</h2>
         </div>
         <Citiescard />
         <WhoHome/>
