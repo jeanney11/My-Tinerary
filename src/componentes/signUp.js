@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   image: {
-    backgroundImage: "url(https://source.unsplash.com/random)",
+    backgroundImage: "url(https://media3.giphy.com/media/xhX1qFxqmDNHG/giphy.gif)",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
