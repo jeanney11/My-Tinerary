@@ -5,10 +5,10 @@ import Carousel from "./Carousel";
 import WhoHome from "./WhoHome";
 import CarruselNew from "./CarrouselNew";
 import {Link as LinkRouter} from "react-router-dom";
-
+import portadagif1 from "../imagenes/portadagif1.gif"
 import logo from "../imagenes/logo.jpg";
 import BoraBora from "../imagenes/Bora-Bora.jpg";
-
+import lineaAvion1 from "../imagenes/lineaAvion1.png"
 import portada3 from "../imagenes/portada3.jpg"
 
 function Home() {
@@ -16,14 +16,23 @@ function Home() {
     <div>
       <div className="Titulo">
         <div className="video-container">
-          <img src={portada3} width="100%" height="400" alt="..." />
+          {/* <img src={portada3} width="100%" height="400" alt="..." /> */}
+          <img className="video1" src={portadagif1} width={1250} height={500}/>
           <h1 className="texto"> Royal Travel</h1>
         </div>
         <div><h2 className="textos"> "to Travel is to Live"</h2></div>
         </div>
-      <div className="Descripcion">
-          <h2>Top Cities</h2>
+
+        <div className="tittle_delinear">
+        
+        <div /* className="Descripcion" */>
+          <h2 className="description_title">Top Cities</h2>
         </div>
+        <div className="decoracion">
+        
+        </div>
+        </div>
+
         <Citiescard />
         <WhoHome/>
     <CarruselNew/>

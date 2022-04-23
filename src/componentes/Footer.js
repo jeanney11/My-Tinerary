@@ -8,7 +8,7 @@ function Footer(){
 
     return(
         <footer className="page-footer">
-          <div className="container">
+          <div className="container-footer">
             <div className="row">
               <div className="col l6 s12">
                 <h5 className="white-text">MY ITINERARY</h5>

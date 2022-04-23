@@ -1,4 +1,31 @@
 import React from "react";
+
+function WhoAre() {
+  return (
+    <div className="bodyWho">
+      <div class="frameWho">
+        <div class="borderWho">
+          <div class="imageWho">
+            <img
+              src="http://nuevorumbo.com.mx/wp-content/uploads/2015/03/GIF-2.gif"
+              height="397"
+              width="297"
+              alt=""
+            />
+          </div>
+          
+        </div>
+       
+      </div>
+      <div class="textWho">Quienes Somos</div>
+      <div className="textoWho">Somos una agencia de turismo con amplia experiencia en la venta de pasajes y paquetes turísticos tanto para particulares como para empresas de todo el país. Brindamos el mejor asesoramiento personalizado, enfocados en generar experiencias únicas en nuestros clientes, liberándolos de las complicaciones de organizar un viaje y permitiéndoles simplemente disfrutar de todas las comodidades.</div>
+    </div>
+  );
+}
+
+export default WhoAre;
+
+/* import React from "react";
 import MaterialIcon, { colorPalette } from "material-icons-react";
 
 import viajeros1 from "../imagenes/viajeros1.jpg";
@@ -40,3 +67,4 @@ function SlideHome() {
   );
 }
 export default SlideHome;
+ */

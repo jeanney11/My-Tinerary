@@ -30,11 +30,11 @@ function Search() {
   return (
     <>
 
-    <div className="container mt-4">
+    <div className="container_search mt-4">
       
     
       <div className="wrapperS">
-        <div className="container">
+        <div className="container_filtro">
           <div className="search_wrap search_wrap_6"> 
             <div class="search_box">
               <input type="text" onChange={imputSearch} class="input" placeholder="search..." />
