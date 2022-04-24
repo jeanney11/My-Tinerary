@@ -104,7 +104,9 @@ const modificarComentario =(event)=>{
     <div className="SlideComentario">
       <Accordion>
         <AccordionSummary aria-controls="panel1a-content" id="panel1a-header">
-          <h3>Comments</h3>
+          <h3  style={{
+        fontFamily: "'Qwitcher Grypen', cursive",
+        color: "rgb(162, 72, 235)", fontSize:"2em"}}>Comments</h3>
         </AccordionSummary>
 
        

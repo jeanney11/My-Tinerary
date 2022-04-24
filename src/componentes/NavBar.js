@@ -2,6 +2,7 @@ import React from "react";
 import MaterialIcon, { colorPalette } from "material-icons-react";
 import { FarBee } from "react-icons/fa";
 import logo4 from "../imagenes/logo4.jpg";
+import logo3 from '../imagenes/logo3.jpg';
 import Facebook from "../imagenes/Facebook.jpg";
 import { Link as LinkRouter } from "react-router-dom";
 import axios from "axios";
@@ -58,7 +59,7 @@ function NavBar() {
           <div className="dropdown">
 
             <button id="btnGroupDrop1" type="button"className="btn btn-transparent dropdown"data-bs-toggle="dropdown" aria-expanded="false">
-              <MaterialIcon icon="person_pin" color="#004e92" size="large" />
+             <img src={logo3} width={60} /> {/* <MaterialIcon icon="person_pin" color="#004e92" size="large" /> */}
             </button>
 
             <ul className="dropdown-menu" aria-labelledby="btnGroupDrop1">

@@ -38,6 +38,15 @@ console.log(citySelecter)
 
         <HeadCity citySelecter={citySelecter}/>
         <InfoCity citySelecter={citySelecter}/>
+        <div className="tittle_delinear">
+        
+        <div /* className="Descripcion" */>
+          <h2 className="description_title">Itineraries</h2>
+        </div>
+        <div className="decoracion">
+        
+        </div>
+        </div>
         <TitleCity/>
         <Itinerary itineraries={itineraries}/>   
         {/* <Comments/>  */}

@@ -29,7 +29,7 @@ function Cities() {
           <CardsCity/>
         </div>
       </div>
-
+{/* 
       <div className="App">
         <div
           style={{
@@ -41,7 +41,16 @@ function Cities() {
         >
           <h2 style={{ textAlign: "center", fontFamily: "'Qwitcher Grypen', cursive", color:"fuchsia", fontSize:"80px"}}>Take Advantage of our Promotions</h2>
         </div>
-      </div>
+      </div> */}
+      <div className="tittle_delinear">
+        
+        <div /* className="Descripcion" */>
+          <h2 className="description_title">Promotions</h2>
+        </div>
+        <div className="decoracion">
+        
+        </div>
+        </div>
 
       <Carousel />
     </div>

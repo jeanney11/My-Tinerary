@@ -17,7 +17,7 @@ function Home() {
       <div className="Titulo">
         <div className="video-container">
           {/* <img src={portada3} width="100%" height="400" alt="..." /> */}
-          <img className="video1" src={portadagif1} width={1250} height={500}/>
+          <img className="video1" src={portadagif1} width={1250} height={450}/>
           <h1 className="texto"> Royal Travel</h1>
         </div>
         <div><h2 className="textos"> "to Travel is to Live"</h2></div>
