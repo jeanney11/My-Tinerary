@@ -49,11 +49,12 @@ function App() {
       })
       //console.log(token)
       .then(user => {
+        console.log(user)
       if(user.data.success){
 
         dispatch({
-          type:actionType.USER,
-          user:user.data.respuesta
+          type:actionType.USERDB,
+          user:user.data.data
         })
       } else{
         localStorage.removeItem("token")
