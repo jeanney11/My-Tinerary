@@ -49,7 +49,7 @@ function App() {
       })
       //console.log(token)
       .then(user => {
-        console.log(user)
+        // console.log(user)
       if(user.data.success){
 
         dispatch({
