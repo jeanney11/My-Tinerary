@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   image: {
-    backgroundImage: "url(https://media3.giphy.com/media/xhX1qFxqmDNHG/giphy.gif)",
+    backgroundImage: "url(https://camiper.com/assets/viajes/img/india/comp-famili.gif)",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
