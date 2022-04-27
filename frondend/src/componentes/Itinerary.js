@@ -32,7 +32,7 @@ function Itinerary(props) {
     const token= localStorage.getItem("token")
     console.log(user)
     console.log(token)
-    const response = await axios.post("http://localhost:4000/api/likesDislike",{id},{
+    const response = await axios.post("https://mytinerary-jeanney.herokuapp.com/api/likesDislike",{id},{
         headers:{
           'Authorization':'Bearer ' + token
         }
@@ -41,7 +41,7 @@ function Itinerary(props) {
         //setItinerarios(response.data.response)
         setReload(!reload)
 }
-  useEffect(()=>{  axios.get(`http://localhost:4000/api/itinerary/${id}`)
+  useEffect(()=>{  axios.get(`https://mytinerary-jeanney.herokuapp.com/api/itinerary/${id}`)
   .then(
     response=>setItinerarios(response.data.response.itinerary)
   )

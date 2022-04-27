@@ -91,7 +91,7 @@ export default function SignUp() {
       from: "signup",
     };
 
-    await axios.post("http://localhost:4000/api/signup", { NuevoUsuario }).then(
+    await axios.post("https://mytinerary-jeanney.herokuapp.com/api/signup", { NuevoUsuario }).then(
       (
         response //alert(response.data.response))
       ) =>

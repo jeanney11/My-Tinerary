@@ -44,7 +44,7 @@ function Slide(props) {
       // user: user.dataUser.id
     };
    
-    await axios.post("http://localhost:4000/api/comments",{ dataComents },{
+    await axios.post("https://mytinerary-jeanney.herokuapp.com/api/comments",{ dataComents },{
       headers:{
         'Authorization':'Bearer ' + token
       }
@@ -60,7 +60,7 @@ function Slide(props) {
         
         console.log(id)
         
-        axios.get(`http://localhost:4000/api/itinerario/${id}`)
+        axios.get(`https://mytinerary-jeanney.herokuapp.com/api/itinerario/${id}`)
       .then(response =>{   
     setComment(response.data.response.itinerario.comments)
         
@@ -75,7 +75,7 @@ const borrarComentario=(event)=>{
   const token= localStorage.getItem("token")
   const id= event.target.id
   console.log(event.target)
-  axios.post(`http://localhost:4000/api/deletecomments/${id}`,{},{
+  axios.post(`https://mytinerary-jeanney.herokuapp.com/api/deletecomments/${id}`,{},{
     headers:{
       'Authorization':'Bearer ' + token
     }
@@ -91,7 +91,7 @@ const modificarComentario =(event)=>{
       
       // console.log(id,cambio)
   let data= cambio
-  axios.put(`http://localhost:4000/api/comments/${id}`, {data})
+  axios.put(`https://mytinerary-jeanney.herokuapp.com/api/comments/${id}`, {data})
   .then(response =>console.log(response))
       setReload(!reload)
       

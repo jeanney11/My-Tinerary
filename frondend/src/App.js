@@ -25,7 +25,7 @@ function App() {
   }
   useEffect(() => {
 
-    axios.get("http://localhost:4000/api/datos")
+    axios.get("https://mytinerary-jeanney.herokuapp.com/api/datos")
   .then(response =>{
     dispatch({
       type:actionType.CITIESDB,
@@ -42,7 +42,7 @@ function App() {
 
      if(localStorage.getItem("token")!==null){
       const token= localStorage.getItem("token")
-       axios.get("http://localhost:4000/api/signInToken",{
+       axios.get("https://mytinerary-jeanney.herokuapp.com/api/signInToken",{
         headers:{
           'Authorization':'Bearer ' + token
         }
